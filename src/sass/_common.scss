@@ -1,1 +1,12 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+body {
+    font-family: $primaryFontFamily;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+
+    color: $primaryTextColor;
+    background-color: $primaryBgc;
+}
+.section {
+    padding: 30px 0;
+}
