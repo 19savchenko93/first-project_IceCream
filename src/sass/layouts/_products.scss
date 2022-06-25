@@ -116,8 +116,8 @@
     left: 50%;
     transform: translateX(-50%);
     background-color: $primaryTextColor;
-    box-shadow: $primaryTextColor 9px 0px,
-        $primaryTextColor -9px 0px;
+    box-shadow: $primaryTextColor 10px 0px,
+        $primaryTextColor -10px 0px;
 }
 .products-list__description {
     @include fontstyle (400, 14px, 1.5);
