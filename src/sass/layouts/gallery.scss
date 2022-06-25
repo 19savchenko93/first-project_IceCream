@@ -1,4 +1,6 @@
 .gallery {
+    padding-left:0;
+    padding-right: 0;
     height: 136px;
     background-image: linear-gradient(
     to bottom,
@@ -15,17 +17,26 @@
 }
 
 .gallery__container {
+    display: grid;
+grid-template-columns: 43px 43px 89px 43px 43px 43px; 
+grid-template-rows: 89px 43px;
+grid-gap: 2.5px;
+
+@include mq(tablet-only) {
+display: grid;
+grid-template-columns: 104px 104px 214px 104px 104px 104px; 
+grid-template-rows: 214px 104px;
+grid-gap: 6px;
+}
+
      @include mq(desktop) {
 display: grid;
 grid-template-columns: 138px 138px 283px 138px 138px 138px; 
 grid-template-rows: 283px 138px;
 grid-gap: 8px;
-& .gallery__list-item1 {
-    width: 138px;
-    height: 138px;
 }
 }
-}
+
 
 .grid-item {
     display: flex;
