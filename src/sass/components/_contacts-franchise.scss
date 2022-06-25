@@ -1,0 +1,197 @@
+/* ​‌‍‌⁡⁣⁣⁢𝗠𝗼𝗱𝗮𝗹⁡​  */
+
+.visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+
+    opacity: 1;
+	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal-wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 40px;
+    width: 528px;
+    background-color: $headerBgc;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    
+    transform: translate(-50%, -50%) scale(1);
+	opacity: 1;
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ 
+    @media screen and (max-width:767px) {
+        width: 350px;
+    }
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        width: 450px;
+        // height:609px;
+    }
+}
+
+/* Початковий стан елементу перед анмацією */
+.backdrop.is-hidden .modal-wrapper{
+    transform: translate(-50%, -50%) scale(.4);
+    opacity: 0;
+}
+
+/* Кінцевий стан елемента після анімації */
+
+.backdrop .modal-wrapper{
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.modal-btn{
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+    background-color: $headerBgc;
+    border-radius: 50%;
+    fill: $secondaryBgc;
+    border: 1px solid rgba(0, 0, 0, 0.1);  
+
+    cursor: pointer;
+}
+
+.modal-btn:hover, 
+.modal-btn:focus{
+    fill: $secondaryTextColor;
+}
+
+
+/* ​‌‍‌⁡⁣⁣⁢𝗠𝗼𝗱𝗮𝗹⁡​ form */
+
+.modal-title{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    
+    color:  $secondaryBgc;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width:1199px) {
+        // width: 370px;
+        display: flex;
+        text-align: center;
+
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+.modal-form{
+    margin-top: 32px;
+}
+
+.modal-form__group{
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.modal-form__input{
+    border: 1px solid  $headerBgc;
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+
+    padding: 0 33px;
+    margin-top: 4px;
+    transition: 250ms ease;
+    background-color: $headerBgc;
+}
+
+.modal-form__input:hover, 
+.modal-form__input:focus{
+    outline: 1px solid $secondaryTextColor;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+
+/* ​‌‍‌⁡⁣⁣⁢‍𝗕𝘂𝘁𝘁𝗼𝗻⁡​ modal submit */
+
+.modal-form__btn{
+    display: flex;
+    justify-content: center;
+}
+
+.modal-btn__submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    background: $subtitleTextColor;
+    border-radius: 4px;
+    border-color: transparent;
+    cursor: pointer;
+
+    transition: 250ms ease;
+    margin-top: 30px;
+}
+
+.modal-btn__submit:hover,
+.modal-btn__submit:focus{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: $secondaryTextColor;
+}
+
+.modal-btn__text{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    
+    color: #FFFFFF;
+}
+
