@@ -1,3 +1,36 @@
-.gallery__list {
-    list-style: none;
+.gallery {
+    height: 136px;
+    background-image: linear-gradient(
+    to bottom,
+    $secondaryBgc 37%,
+    $btnBgcPrimary 37%);
+
+    @include mq(tablet-only) {
+        height: 327;
+    }
+
+    @include mq(desktop) {
+        height: 430;
+    }
+}
+
+.gallery__container {
+     @include mq(desktop) {
+display: grid;
+grid-template-columns: 138px 138px 283px 138px 138px 138px; 
+grid-template-rows: 283px 138px;
+grid-gap: 8px;
+& .gallery__list-item1 {
+    width: 138px;
+    height: 138px;
+}
+}
+}
+
+.grid-item {
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
