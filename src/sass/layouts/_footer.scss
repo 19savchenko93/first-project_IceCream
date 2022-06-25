@@ -1,0 +1,121 @@
+.ft{background: $secondaryBgc;
+    padding-bottom: 0;}
+
+.footer{
+    @include mq(tablet){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    @include mq(desktop){display: flex;
+    align-items: flex-end;
+    margin-bottom: 60px;}
+}
+
+.footer__subtitle{
+    @include fontstyle(400, 18px, 1.17);
+    font-family: $secondaryFontFamily;
+    text-transform: uppercase;
+    color: $subtitleTextColor;
+    margin-bottom: 16px;
+    @include mq(tablet){
+        @include fontstyle(400, 26px, 1.15);}
+
+    @include mq(desktop){
+    @include fontstyle(400, 30px, 1.13);}
+}
+
+.footer__title{
+    @include fontstyle(400, 34px, 1.15);
+    color: $secondaryTextColor;
+    font-family: $secondaryFontFamily;
+    text-transform: uppercase;
+
+    @include mq(tablet){
+        @include fontstyle(400, 48px, 1.15);
+        letter-spacing: 0.06em;}
+
+    @include mq(desktop){
+    @include fontstyle(400, 58px, 1.14);
+    }
+}
+.footer__invite{
+    font-family: $primaryFontFamily;
+    @include fontstyle(700, 12px, 1.86);
+    color:$blacktext;
+    text-align: right;
+    margin-bottom: 40px;
+    @include mq(tablet){
+        @include fontstyle(700, 14px, 1.86);
+        }
+        @include mq(desktop){
+            @include fontstyle(700, 16px, 1.86);
+            letter-spacing: 0.02em;
+            margin-bottom: 0;
+            }
+}
+.footer__phone{
+    color:$secondaryTextColor;
+}
+
+.footer__text{
+    font-family: $primaryFontFamily;
+    color: $textcolor;
+    @include fontstyle(700, 14px, 1.52);
+    text-align: center;
+    border-top: 1px solid #E1E1E1;
+    padding: 16px 0 3px 0;
+    @include mq(tablet){
+    padding: 8px 0 3px 0;
+    @include fontstyle (700, 14px, 1.86);
+    letter-spacing: 0.02em;}
+}
+
+.social-contact__list{
+display: flex;
+justify-content: flex-end;
+margin-bottom: 40px;
+}
+.social-contact__item{
+    margin-right: 28.24px;
+    &:last-child{margin-right: 0;}
+    @include mq(tablet){
+        margin-right: 30px;
+    }
+}
+.social-contact__icon{
+    fill:#FEA5BB;
+}
+.social-contact__link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+
+}
+.social-contact__link:focus .social-contact__icon{
+            fill: $secondaryTextColor;
+}
+.social-contact__link:hover .social-contact__icon{
+    fill: $secondaryTextColor;
+}
+.footer-title{display: block;
+    margin-bottom: 40px;
+     @include mq(mobily){
+        width: 232px;
+    }
+    @include mq(tablet){
+        width: 340px;
+    }
+    @include mq(desktop){
+    margin-bottom: 0;
+    width: 500px;
+}
+    
+}
+.social-contact{
+    display: block;
+    text-align: left;
+}
