@@ -1,0 +1,38 @@
+<section class="about">
+    <div class="container">
+        <p class="about-subtitle"></p>
+        <h2 class="about-title"></h2>
+        <div class="about-content">
+            <picture>
+                <source media="(min-width:1200px )" 
+                        srcset="
+                            /src/images/about/about-image__lg.png 1x, 
+                            /src/images/about/about-image__lg@2x.png 2x
+                            " 
+                            type="image/png" />
+                <source media="(min-width:768px )" 
+                        srcset="
+                            /src/images/about/about-image__md.png 1x, 
+                            /src/images/about/about-image__md@2x.png 2x
+                            " 
+                            type="image/png" />
+                <source media="(max-width:767px )" 
+                        srcset="
+                            /src/images/about/about-image__sm.png 1x, 
+                            /src/images/about/about-image__sm@2x.png 2x
+                            " 
+                            type="image/png" />
+                <img class="about-img" src="/src/images/about/about-image__sm.png" alt="Изображение коровы с графином молока"">
+            </picture>
+            <div class="about-content__textarea">
+                <p class="about-content__text--accent">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem eget, egestas eros.
+                Maecenas eleifend erat at justo fringilla.</p>
+                <p class="about-content__text">Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci in imperdiet placerat.
+                Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt.
+                
+                Aliquam erat volutpat. Aenean accumsan.</p>
+            </div>
+            <button class="about-btn" type="button">Read more</button>
+        </div>
+    </div>
+</section>
