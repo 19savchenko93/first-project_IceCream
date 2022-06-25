@@ -4,6 +4,12 @@
     background: linear-gradient($primaryTextColor,  $secondaryBgc);
 }
 
+.contacts-h1{
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
 .contacts-list{
     display: flex;
 
