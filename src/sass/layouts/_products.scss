@@ -53,10 +53,13 @@
 };
 
 .products-list__item {
+    // 
+    position: relative;
+    transform-style: preserve-3d;
+    transition: .7s cubic-bezier(0.075, 0.82, 0.165, 1);
+
     padding: 160px 40px 40px;
     border-radius: 24px;
-    background-position: center;
-    background-size: contain;
 
     @include mq(mobile-only) {
         margin-bottom: 140px;
@@ -64,6 +67,7 @@
         margin-bottom: 0;
         }
     }
+   
     @include mq(tablet) {
         flex-basis: calc((100% - 32px) / 3);
         padding: 118px 32px 32px;
@@ -74,6 +78,11 @@
         padding: 165px 62px 60px;
     }
 };
+.products-list__item:hover,
+.products-list__item:focus {
+    box-shadow: 0 0 20px $textcolor;
+}
+
 
 .products-list__item--ice-cream {
     background-color: $headerBgc;
@@ -89,7 +98,6 @@
 }
 
     
-
 .products-list__title {
     position: relative;
     @include fontstyle (400, 20px, 1.15);
@@ -113,9 +121,12 @@
                 transform: translate(-50%, -50%);
                 width: 280px;
                 height: 280px;
+                z-index: 2;
+                pointer-events: none;
                 background-position: center;
                 background-size: contain;
                 background-repeat: no-repeat;
+                transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
         
                 @include mq(tablet) {
                     width: 224px;
@@ -129,6 +140,9 @@
                     bottom: -130px;
                 }
 
+}
+.products-list__item:hover .products-list__title::before {
+    transform: translate(-50%, -45%);
 }
 .products-list__title--ice-cream {
     &::before {
@@ -239,16 +253,83 @@
 };
 
 .products-list__btn {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     border-radius: 50%;
     width: 40px;
     height: 40px;
     margin: 0 auto;
-    background-position: center;
-    background-size: contain;
-    background-image: url(../images/products/arrow-right.png);
-    @include mq(retina) {
-        background-image: url(../images/products/arrow-right@2x.png);
-    }
+    background-color: $primaryTextColor;
+    transition: box-shadow 0.3s cubic-bezier(0.39, 0.575, 0.565, 1), background-color 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
 };
+.product-list__icon {
+    fill: $secondaryTextColor;
+    transition: transform 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.products-list__btn:focus .products-list__item {
+    transform: rotateY(180deg);
+}
+@keyframes pulse-shrink {
+    to {
+        transform: scale(.9);
+    }
+}
+.products-list__btn:hover {
+    box-shadow: 0 0 20px $textcolor;
+        cursor: pointer;
+        animation-name: pulse-shrink;
+        animation-duration: .4s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+}
+.products-list__btn:focus {
+    animation-play-state: paused;
+    box-shadow: 0 0 30px $textcolor;
+    background-color: #e5e7e8;
+}
+
+
+.des {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: black;
+    // transform: translateX(-100%);
+    border-radius: 24px;
+    padding: 118px 32px 32px;
+    font-size: 14px;
+    transition: transform 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+    background-image: url(../images/products/ice-menu.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+    transform: scale(0.3);
+    z-index: 25;
+    transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+}
+.products-list__btn--des {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+}
+.js-menu-container-a.is-open {
+    transform: scale(1);
+    opacity: 1;
+}
+.js-menu-container-b.is-open {
+    transform: scale(1);
+    opacity: 1;
+}
+.js-menu-container-c.is-open {
+    transform: scale(1);
+    opacity: 1;
+}

@@ -10,9 +10,28 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et. dolore magna aliqua facilisis.
       </p>
-      <button type="button" class="products-list__btn"></button>
+      <button
+        type="button"
+        class="products-list__btn js-open-menu-a"
+        aria-controls="des-ice-cream"
+      >
+        <svg class="product-list__icon" width="11" height="20">
+          <use href="./images/symbol-defs.svg#arrow-right"></use>
+        </svg>
+      </button>
+      <div class="des js-menu-container-a" id="des-ice-cream">
+        <button
+          type="button"
+          class="products-list__btn products-list__btn--des js-close-menu-a"
+          aria-controls="des-ice-cream"
+        >
+          <svg class="product-list__icon" width="14" height="20">
+            <use href="./images/symbol-defs.svg#close-delete-icon"></use>
+          </svg>
+        </button>
+      </div>
     </li>
-
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
     <li class="products-list__item products-list__item--ice-coffee">
       <h3 class="products-list__title products-list__title--ice-coffee">
         ice coffee
@@ -21,8 +40,28 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et. dolore magna aliqua facilisis.
       </p>
-      <button type="button" class="products-list__btn"></button>
+      <button
+        type="button"
+        class="products-list__btn js-open-menu-b"
+        aria-controls="des-icecoffee"
+      >
+        <svg class="product-list__icon" width="11" height="20">
+          <use href="./images/symbol-defs.svg#arrow-right"></use>
+        </svg>
+      </button>
+      <div class="des js-menu-container-b" id="des-ice-coffee">
+        <button
+          type="button"
+          class="products-list__btn products-list__btn--des js-close-menu-b"
+          aria-controls="des-icecoffee"
+        >
+          <svg class="product-list__icon" width="14" height="20">
+            <use href="./images/symbol-defs.svg#close-delete-icon"></use>
+          </svg>
+        </button>
+      </div>
     </li>
+    <!-- //////////////////////////////// -->
 
     <li class="products-list__item products-list__item--milkshakes">
       <h3 class="products-list__title products-list__title--milkshakes">
@@ -32,7 +71,26 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et. dolore magna aliqua facilisis.
       </p>
-      <button type="button" class="products-list__btn"></button>
+      <button
+        type="button"
+        class="products-list__btn js-open-menu-c"
+        aria-controls="des-milkshakes"
+      >
+        <svg class="product-list__icon" width="11" height="20">
+          <use href="./images/symbol-defs.svg#arrow-right"></use>
+        </svg>
+      </button>
+      <div class="des js-menu-container-c" id="des-milkshakes">
+        <button
+          type="button"
+          class="products-list__btn products-list__btn--des js-close-menu-c"
+          aria-controls="des-milkshakes"
+        >
+          <svg class="product-list__icon" width="14" height="20">
+            <use href="./images/symbol-defs.svg#close-delete-icon"></use>
+          </svg>
+        </button>
+      </div>
     </li>
   </ul>
 </section>
