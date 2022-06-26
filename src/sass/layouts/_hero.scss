@@ -4,6 +4,9 @@
    background-color:$headerBgc;
 //    position: relative;
    overflow: hidden;
+   @include mq(tablet){
+       padding-top: 32px;
+   }
 }
 .hero-div.container{
     position: relative;
@@ -14,6 +17,10 @@ padding-bottom: 245px;
 @include mq(tablet){
     padding-top: 150px;
     padding-bottom: 212px;
+}
+@include mq(desktop){
+    padding-top: 350px;
+    padding-bottom: 232px;
 }
 
 }
@@ -37,9 +44,18 @@ top: 194px;
 @include mq(tablet){
     left: 32px;
 top: 102px;
+font-size: 22px;
+width: 162px;
+}
+@include mq(desktop){
+    font-size: 38px;
+    width: 277px;
+    top: 115px;
+    left: 16px;
+    line-height:52.49px;
+}
 }
 
-}
 .hero__tittle--word{
 font-family: $secondaryFontFamily;
 font-size: 48px;
@@ -48,8 +64,13 @@ line-height: 46px;
 letter-spacing: 0em;
 color: $secondaryTextColor;
 text-transform:uppercase;
+@include mq(tablet){
+font-size: 34px;
 }
-
+@include mq(desktop){
+    font-size: 58px;
+}
+}
 .hero__list{
 position: absolute;
 
@@ -59,6 +80,9 @@ margin-top: 20px;
 display: flex;
 @include mq(tablet){
     top: 202px;
+}
+@include mq(desktop){
+    top: 276px;
 }
 }
 .hero__item--red{
@@ -77,11 +101,18 @@ font-weight: 400;
 line-height: 10px;
 letter-spacing: 0em;
 text-align: center;
+@include mq(desktop){
+    font-size: 14px;
+    height: 40px;
+}
 }
 .hero__button--red{
 width: 62.4px;
 color:$primaryTextColor;
 background-color:$secondaryTextColor ;
+@include mq(desktop){
+    width: 107px;
+}
 }
 .hero__button--white{
 width: 82.8px;
@@ -90,10 +121,16 @@ color:$secondaryTextColor ;
 &:hover{
     background-color: #ECEBEB;;
 }
+@include mq(desktop){
+    width: 138px;
+}
 }
 .menu__button{
     border: none;
     background-color:transparent;
+    @include mq(desktop){
+        display: none;
+    }
 }
 .icon-close{
     fill:$primaryTextColor;
@@ -116,6 +153,12 @@ top: 43px;
 width: 335px;
 height:333px;
 }
+@include mq(desktop){
+    width: 534px;
+    height: 534px;
+    top: 21px;
+    left: 517px;
+}
 }
 .img__icecream{
 position: absolute;
@@ -130,6 +173,12 @@ top: 80px;
 width: 143px;
 height: 336px;
 top: 80px;
+}
+@include mq(desktop){
+    width: 236px;
+    height: 557px;
+    top: 76px;
+    left: 636px;
 }
 }
 // tablet
@@ -169,6 +218,11 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     left: 546px;
 top: 265px;
     }
+    @include mq(desktop){
+        width: 304px;
+        top: 391px;
+        left: 880px;
+}
 }
 .img__milk{
     display: none;
@@ -178,6 +232,147 @@ top: 265px;
         width: 152px;
         left: 32px;
         top: 246px;
+    }
+    @include mq(desktop){
+        width: 213px;
+        left: 16px;
+top: 356px;
+}
+}
+.hero__text{
+    display: none;
+    @include mq(tablet){
+    display: block;
+    width: 114px;
+    color: $primaryTextColor;
+    font-style: normal;
+    position: absolute;
+    left: 184px;
+    top: 287px;
+    font-family: $primaryFontFamily;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+@include mq(desktop){
+    width: 200px;
+    font-size: 14px;
+    line-height: 20px;
+    left: 229px;
+    top: 424px;
+}
+}
+.img__arrow{
+    display: none;
+    @include mq(tablet){
+        display: block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 184px;
+    top: 342px;
+    }
+    @include mq(desktop){
+        width: 26px;
+        height: 26px;
+        left: 229px;
+    top: 522px;
 
     }
+}
+.hero__numbers{
+    position: absolute;
+    z-index: 105;
+    left: 673px;
+    top: 64px;
+    @include mq(desktop){
+    left: 1112px;
+    top: 120px;
+
+    }
+}
+.hero__number{
+    &:not(:last-child){
+        margin-bottom: 16px;
+    }
+    @include mq(desktop){
+        &:not(:last-child){
+            margin-bottom: 15px;
+    }
+}
+}
+.text__number{
+    font-family: $secondaryFontFamily;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+    text-align: right;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $secondaryTextColor;
+    position: relative;
+    z-index: 100;
+    @include mq(desktop){
+        font-size: 46px;
+        line-height:52.67px;
+    }
+}
+.text__tittle{
+    font-family: $primaryFontFamily;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 10px;
+    text-align: right;
+    @include mq(desktop){
+        font-size: 14px;
+    }
+}
+.img__whitecircle{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    z-index: 99;
+    top: -2px;
+    left: 43px;
+    @include mq(desktop){
+        width: 30px;
+        height: 30px;
+        top: -10px;
+    left: 70px;
+    }
+}
+.img__whitecircle.second{
+    top: 56px;
+    @include mq(desktop){
+        top: 68px;
+}
+}
+// desktop
+.site__navigation{
+    display: none;
+    @include mq(desktop){
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 343px;
+        z-index: 110;
+    }
+}
+.navigation__item{
+    font-family: $primaryFontFamily;
+    color:$primaryTextColor ;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    &:not(:last-child){
+        margin-right: 35px;
+    }
+}
+.navigation__item.current{
+    color: $secondaryTextColor;
 }
