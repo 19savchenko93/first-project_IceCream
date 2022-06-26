@@ -99,22 +99,22 @@
     
             @include mq(tablet) {
                 background-image: url(../images/advantages/image-1.png);
-    
-                @include mq(retina) {
-                    background-image: url(../images/advantages/image-1@2x);
-                }
             }
+            @include mq(retina) {
+                background-image: url(../images/advantages/image-1@2x);
+            }
+            
     
             @include mq(desktop) {
                 background-image: url(../images/advantages/image-1.png);
-    
+            }
             @include mq(retina) {
                 background-image: url(../images/advantages/image-1@2x);
             }
         }
     }
 
-}
+
 
 .advantages__amount--16kg {
    font-family: 'Titan One';
@@ -218,22 +218,23 @@
     
             @include mq(tablet) {
                 background-image: url(../images/advantages/image-3.png);
-    
+            }
                 @include mq(retina) {
                     background-image: url(../images/advantages/image-3@2x);
                 }
-            }
+            
     
             @include mq(desktop) {
                 background-image: url(../images/advantages/image-3.png);
-    
+            }
             @include mq(retina) {
                 background-image: url(../images/advantages/image-3@2x);
             }
+        
         }
+    
     }
 
-}
 
 .advantages__about {
     font-family: 'DM Sans';
