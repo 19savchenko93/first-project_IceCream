@@ -23,25 +23,66 @@
 .reviews__text {
   position: relative;
 
+  color: #000000;
+  text-align: center;
+
+  @media screen and (max-width: 767.5px) {
   background-color:  #fafafa;
   background-image: url('../images/reviews/quotes.svg'), 
   repeating-linear-gradient(
     to bottom,
-    #fafafa,
-    #fafafa 76px,
-    #e1e1e1 76px,
-    #e1e1e1 78px,
-    #fafafa 78px,
-    #fafafa 108px,
-    #e1e1e1 108px,
-    #e1e1e1 110px,
-    #fafafa 110px,
-    #fafafa 138px);
-          ;
+    #e1e1e1,
+    #e1e1e1 1px,
+    #fafafa 1px,
+    #fafafa 31px
+    );
+  
   background-repeat: no-repeat;
-  background-position: top 32px left 65px, top 0px left 72px;
-  background-size: auto, 822px 138px;
+  background-position: top 30px left 53px, top 74px left 50px;
+  background-size: 54px 40px, 180px 218px;
 
+  max-width: 280px; 
+  padding: 43px 58px 26px 65px;
+  margin-bottom: 42px;
+
+  @include fontstyle(500, 12px, 2.55);
+    
+  }
+
+  @include mq(tablet){
+    background-color:  #fafafa;
+    background-image: url('../images/reviews/quotes.svg'), 
+    repeating-linear-gradient(
+      to bottom,
+      #e1e1e1,
+      #e1e1e1 1px,
+      #fafafa 1px,
+      #fafafa 31px
+      );
+    background-repeat: no-repeat;
+    background-position: top 20px left 6px, top 68px left 6px;
+    background-size: 60.35px 40px, 608px 64px;
+  
+      max-width: 620px; 
+      padding: 37px 55.18px 44px 50.71px;
+      margin-bottom: 24px;
+      @include fontstyle(500, 14px, 2.16);
+    
+  }
+
+  @include mq(desktop){
+    background-color:  #fafafa;
+    background-image: url('../images/reviews/quotes.svg'), 
+    repeating-linear-gradient(
+      to bottom,
+      #e1e1e1,
+      #e1e1e1 1px,
+      #fafafa 1px,
+      #fafafa 31px
+      );
+  background-repeat: no-repeat;
+  background-position: top 32px left 72px, top 76px left 72px;
+  background-size: 54px 40px, 822px 33px;
 
   max-width: 968px;
   padding: 47px 109px 39px 109px;
@@ -53,7 +94,8 @@
   line-height: 30px;
   letter-spacing: 0.04em;
   text-align: center;
-  color: #000000;
+}
+
 }
 
 // .reviews__text::before {
@@ -71,13 +113,23 @@
 // }
 .reviews__person {
   position: relative;
-  font-family: DM Sans;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 37px;
-  letter-spacing: 0em;
-  text-align: center;
-  color: #000000;
+
+  @include mq(mobile){
+    font-family: DM Sans;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.86;
+    text-align: center;
+    color: #000000;
+  }
+
+  @include mq(tablet){
+    font-size: 16px;
+  }
+
+  @include mq(desktop){
+    font-size: 20px;
+  }
 }
 
 .reviews__person::before {
