@@ -158,23 +158,25 @@
     
             @include mq(tablet) {
                 background-image: url(../images/advantages/image-2.png);
+            }
     
                 @include mq(retina) {
                     background-image: url(../images/advantages/image-2@2x);
                 }
-            }
+            
     
             @include mq(desktop) {
                 background-image: url(../images/advantages/image-2.png);
+            }
     
             @include mq(retina) {
                 background-image: url(../images/advantages/image-2@2x);
             }
+            }
         }
 
-    }
+    
 
-}
 
 .advantages__amount--84 {
     font-family: 'Titan One';
