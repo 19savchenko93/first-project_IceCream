@@ -94,14 +94,14 @@
         background-image: url(../images/advantages/image-1.png);
     
             @include mq(retina) {
-                background-image: url(../images/advantages/image-1@2x);
+                background-image: url(../images/advantages/image-1@2x.png);
             }
     
             @include mq(tablet) {
                 background-image: url(../images/advantages/image-1.png);
             }
             @include mq(retina) {
-                background-image: url(../images/advantages/image-1@2x);
+                background-image: url(../images/advantages/image-1@2x.png);
             }
             
     
@@ -109,7 +109,7 @@
                 background-image: url(../images/advantages/image-1.png);
             }
             @include mq(retina) {
-                background-image: url(../images/advantages/image-1@2x);
+                background-image: url(../images/advantages/image-1@2x.png);
             }
         }
     }
@@ -153,14 +153,14 @@
     background-image: url(../images/advantages/image-2.png);
     
             @include mq(retina) {
-                background-image: url(../images/advantages/image-2@2x);
+                background-image: url(../images/advantages/image-2@2x.png);
             }
     
             @include mq(tablet) {
                 background-image: url(../images/advantages/image-2.png);
     
                 @include mq(retina) {
-                    background-image: url(../images/advantages/image-2@2x);
+                    background-image: url(../images/advantages/image-2@2x.png);
                 }
             }
     
@@ -168,7 +168,7 @@
                 background-image: url(../images/advantages/image-2.png);
     
             @include mq(retina) {
-                background-image: url(../images/advantages/image-2@2x);
+                background-image: url(../images/advantages/image-2@2x.png);
             }
         }
 
@@ -213,14 +213,14 @@
     background-image: url(../images/advantages/image-3.png);
     
             @include mq(retina) {
-                background-image: url(../images/advantages/image-3@2x);
+                background-image: url(../images/advantages/image-3@2x.png);
             }
     
             @include mq(tablet) {
                 background-image: url(../images/advantages/image-3.png);
             }
                 @include mq(retina) {
-                    background-image: url(../images/advantages/image-3@2x);
+                    background-image: url(../images/advantages/image-3@2x.png);
                 }
             
     
@@ -228,7 +228,7 @@
                 background-image: url(../images/advantages/image-3.png);
             }
             @include mq(retina) {
-                background-image: url(../images/advantages/image-3@2x);
+                background-image: url(../images/advantages/image-3@2x.png);
             }
         
         }
