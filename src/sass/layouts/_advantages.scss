@@ -1,6 +1,6 @@
 .advantages {
     background-color: $secondaryBgc;
-    padding-bottom: 87px;
+    padding-bottom: 60px;
 }
 
 .advantages__title {
@@ -10,23 +10,25 @@
 
 
 .advantages__list {
-    display: block;
-    box-sizing: border-box;
+    list-style-type: none;
     padding: 0px;
     margin: 0px;
-    list-style-type: none;
 
-        @media screen and (max-width:767px) {
+        @include mq(mobile-only) {
+        display: flex;
+        flex-direction: column;
+        }
+
+        @include mq(tablet) {
         display: flex;
         flex-wrap: wrap;
-        padding: 0px;
-        margin: 0px;
         width: 767px; 
         margin-right: -4px; 
         }
         
-        @media screen and (min-width:768px) and (max-width:1199px) { 
+        @include mq(desktop) { 
         width: 1200px; 
+        margin-right: -115px;
         }
 
 }
@@ -34,26 +36,27 @@
 .advantages__item {
     position: relative;
     height: 167px;
-    width: 440px;
-    margin-bottom: 32px;
+    max-width: 440px;
+    margin: 0px 0px 32px 0px;
+    padding: 0px;
 
-        @media screen and (max-width:767px) {
+    @include mq(tablet) {
         display: flex;
         flex-wrap: wrap;
-        
         width: 180px; 
         height: 226px;
-        margin-right: 4px;
+        margin: 0px 4px 0px 0px;
         }
         
-        @media screen and (min-width:768px) and (max-width:1199px) { 
+        @include mq(desktop) { 
+        display: block;
         width: 288px; 
         height: 223px;
         margin-right: 115px;
         }
 
         &:last-child  {
-        margin-bottom: 0px; 
+        margin-right: 0px; 
         }
 }
 
@@ -71,19 +74,19 @@
     padding-bottom: 4px;
     margin:0px;
 
-    @media screen and (max-width:767px) {
+    @include mq(tablet) {
+        padding-bottom: 13px;
         @include  fontstyle(400,48px,55px);
         }
         
-        @media screen and (min-width:768px) and (max-width:1199px) {
+        @include mq(desktop) {
+            padding-bottom: 16px;
             @include  fontstyle(400,58px,66px);
             }
 
     &::before {
         content: ' ';
         display: block;
-        background-color: inherit;
-    
         height: 50px;
         width: 33px;
         margin: 0px 0px 16px 0px;
@@ -114,8 +117,6 @@
         }
     }
 
-
-
 .advantages__amount--16kg {
    font-family: 'Titan One';
     font-weight: 400;
@@ -130,11 +131,13 @@
     padding-bottom: 4px;
     margin:0px;
 
-    @media screen and (max-width:767px) {
+    @include mq(tablet) {
+        padding-bottom: 13px;
         @include  fontstyle(400,48px,55px);
         }
         
-        @media screen and (min-width:768px) and (max-width:1199px) {
+        @include mq(desktop) {
+            padding-bottom: 16px;
             @include  fontstyle(400,58px,66px);
             }
 
@@ -190,11 +193,13 @@
     padding-bottom: 4px;
     margin:0px;
 
-    @media screen and (max-width:767px) {
+    @include mq(tablet) {
+        padding-bottom: 13px;
         @include  fontstyle(400,48px,55px);
         }
         
-        @media screen and (min-width:768px) and (max-width:1199px) {
+        @include mq(desktop)  {
+            padding-bottom: 16px;
             @include  fontstyle(400,58px,66px);
             }
 
@@ -244,15 +249,16 @@
     letter-spacing: 0.02em;
     color: $blacktext;
 
-    padding: 0px 180px 0px 0px;
+    width: 180px;
     margin: 0px;
-    max-width: 464px;
+    
 
-    @media screen and (max-width:767px) {
+    @include mq(tablet) {
         @include  fontstyle(700,14px,174%);
         }
         
-        @media screen and (min-width:768px) and (max-width:1199px) {
+        @include mq(desktop)  {
+            width:288px;
             @include  fontstyle(700,16px,176%);
             }
 
