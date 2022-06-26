@@ -1,11 +1,63 @@
+@import '../../../node_modules/slick-carousel/slick/slick.scss';
+
+
+
+.slick-dots {
+ position: absolute;
+ @include mq(mobile-only){
+  bottom: -30px;
+ }
+ bottom: -40px;
+ left: 50%;
+ transform: translate(-50%);
+ 
+  li{
+    display: inline-block;
+    margin: 0 9px;
+   }
+ 
+  button {
+    padding: 0;
+    border: none;
+    background-color: #D9D9D9;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    font-size: 0;
+ };
+
+}
+
+.slick-active {
+  button{
+  background-color: transparent;
+  width: 13px;
+  height: 13px;
+  border-radius: 0;
+  background-image: url('../images/reviews/frame.svg');
+  background-size: 100%;
+}
+}
+
 // reviews style
 .reviews { 
   background: #fff;
   
-  padding-top: 60px;    
-  padding-bottom: 60px;
-  
+  @include mq(mobile-only){ 
+    padding-bottom: 30px;
+    padding-top: 60px;}
+   
+
+  @include mq(tablet){ 
+    padding-bottom: 60px;
+    padding-top: 60px; }
+
+  @include mq(desktop){ 
+    padding-bottom: 120px;}
+    padding-top: 120px; 
 }
+
 
 .reviews__item {
   display: flex;
@@ -17,7 +69,16 @@
   width: 85px;
   height: 85px;
   text-align: center;
-  margin-bottom: 16px;
+  @include mq(mobile-only){
+  margin-bottom: 32px;}
+  @include mq(tablet){
+    margin-bottom: 20px;
+  }
+  @include mq(desktop){
+    margin-bottom: 16px;
+  }
+
+
 }
 
 .reviews__text {
@@ -26,7 +87,7 @@
   color: #000000;
   text-align: center;
 
-  @media screen and (max-width: 767.5px) {
+  @include mq(mobile-only) {
   background-color:  #fafafa;
   background-image: url('../images/reviews/quotes.svg'), 
   repeating-linear-gradient(
@@ -43,7 +104,7 @@
 
   max-width: 280px; 
   padding: 43px 58px 26px 65px;
-  margin-bottom: 42px;
+  margin-bottom: 36px;
 
   @include fontstyle(500, 12px, 2.55);
     
@@ -67,6 +128,7 @@
       padding: 37px 55.18px 44px 50.71px;
       margin-bottom: 24px;
       @include fontstyle(500, 14px, 2.16);
+      letter-spacing: 0.04;
     
   }
 
@@ -113,22 +175,29 @@
 // }
 .reviews__person {
   position: relative;
+  color: #000000;
+  font-weight: 500;
+  line-height: 1.86;
+  text-align: center;
 
-  @include mq(mobile){
+  @include mq(mobile-only){
     font-family: DM Sans;
     font-size: 14px;
-    font-weight: 500;
-    line-height: 1.86;
-    text-align: center;
-    color: #000000;
+    // font-weight: 500;
+    // line-height: 1.86;
+    // text-align: center;
+    // color: #000000;
   }
 
   @include mq(tablet){
     font-size: 16px;
+    
   }
 
   @include mq(desktop){
     font-size: 20px;
+    
+    
   }
 }
 
