@@ -1,0 +1,103 @@
+
+.hero-header{
+   padding-top: 8px;
+   background-color:$headerBgc;
+   position: relative;
+   overflow: hidden;
+}
+.hero{
+padding-top: 194px;
+   padding-bottom: 245px;
+   width: 480px;
+}
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero__tittle{
+    font-family: $secondaryFontFamily;
+font-size: 26px;
+font-weight: 400;
+line-height: 30px;
+letter-spacing: 0.04em;
+text-align: left;
+text-transform:uppercase;
+width: 218px;
+position: absolute;
+z-index: 100;
+
+}
+.hero__tittle--word{
+
+    font-family: $secondaryFontFamily;
+font-size: 48px;
+font-weight: 400;
+line-height: 46px;
+letter-spacing: 0em;
+color: $secondaryTextColor;
+text-transform:uppercase;
+}
+.hero__button--white,
+.hero__button--red{
+display: block;
+height: 24px;
+left: 20px;
+top: 320px;
+border-radius: 20px;
+border: none;
+font-family: $primaryFontFamily;
+font-size: 8px;
+font-weight: 400;
+line-height: 10px;
+letter-spacing: 0em;
+text-align: center;
+}
+.hero__button--red{
+width: 62.4px;
+color:$primaryTextColor;
+background-color:$secondaryTextColor ;
+position: absolute;
+left: 20px;
+top: 370px;
+z-index: 101;
+}
+.hero__button--white{
+width: 82.8px;
+background-color: $primaryTextColor;
+color:$secondaryTextColor ;
+position: absolute;
+left: 90.4px;
+top: 370px;
+z-index: 101;
+
+}
+.menu__button{
+    border: none;
+    background-color:transparent;
+}
+.icon-close{
+    fill:$primaryTextColor;
+    display: none;
+}
+.menu__button.is-open .icon-close{
+    display: block;
+}
+.menu__button.is-open .icon-menu{
+    display: none;
+}
+.img__circle{
+ position: absolute;
+ width: 346px;
+left: 36px;
+top: 83px;
+}
+.img__icecream{
+position: absolute;
+width: 171px;
+height: 410px;
+left: 117px;
+top: 92px;
+z-index: 90;
+}
+
