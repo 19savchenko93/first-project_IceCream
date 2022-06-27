@@ -1,10 +1,10 @@
 // ⁡⁣⁣⁢​‌‍‌𝗖𝗼𝗻𝘁𝗮𝗰𝘁𝘀​⁡
 
 .section{
-    background:  linear-gradient( $primaryTextColor 0 50%, $secondaryBgc 50% 100%);
+    background:  linear-gradient( $primaryTextColor  20%, $secondaryBgc 50 100%);
 
     @media screen and (max-width:767px) {
-        background:  linear-gradient( $primaryTextColor 0 20%, $secondaryBgc 50% 100%);
+        background:  linear-gradient(  $primaryTextColor 24%, $secondaryBgc 100 100%);
     }
 }
 
