@@ -248,9 +248,14 @@
     line-height: 170%;
     letter-spacing: 0.02em;
     color: $blacktext;
+    border-radius: 7px;
 
-    width: 180px;
+    width: 230px;
     margin: 0px;
+
+    transition-property: background-color, font-size;
+    transition-duration: 150ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
 
     @include mq(tablet) {
@@ -264,7 +269,29 @@
 
 }
 
+.advantages__item:hover .advantages__about {
+    
+display:block;
+background-color: rgba(255,184,202, 0.5);
+box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.3);
+font-size: 14px;
+width: 240px;
+padding: 4px;
 
+@include mq(tablet) {
+    width:185px;
+    font-size: 16px;
+    padding: 0px 4px;
+    }
+    
+    @include mq(desktop)  {
+        width:300px;
+        padding: 5px 2px;
+        font-size: 18px;
+        
+        }
+
+}
 
 
 
