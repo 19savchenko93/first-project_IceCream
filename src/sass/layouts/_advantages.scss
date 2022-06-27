@@ -23,12 +23,10 @@
         display: flex;
         flex-wrap: wrap;
         width: 767px; 
-        margin-right: -4px; 
         }
         
         @include mq(desktop) { 
         width: 1200px; 
-        margin-right: -115px;
         }
 
 }
@@ -40,12 +38,15 @@
     margin: 0px 0px 32px 0px;
     padding: 0px;
 
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
     @include mq(tablet) {
-        display: flex;
-        flex-wrap: wrap;
+        display: block;
         width: 180px; 
         height: 226px;
-        margin: 0px 4px 0px 0px;
+        margin: 0px 18px 0px 0px;
         }
         
         @include mq(desktop) { 
@@ -58,9 +59,34 @@
         &:last-child  {
         margin-right: 0px; 
         }
+
+
+        &:hover,
+        &:focus { 
+        box-shadow: 0px 5px 7px  rgba(212, 20, 67, 0.3);
+        width: 438px;
+        padding: 7px;
+        
+
+    @include mq(tablet) {
+       
+        width: 185px;
+        height: 245px;
+        padding: 3px 4px;
+        }
+        
+    @include mq(desktop)  {
+        display:block;
+        height: 223px;
+        width:288px;
+        padding-left:5px;
+
+        }
+    }
+
 }
 
-.advantages__amount--721 {
+.advantages__amount {
     font-family: 'Titan One';
     font-weight: 400;
     font-size: 36px;
@@ -79,67 +105,51 @@
         @include  fontstyle(400,48px,55px);
         }
         
-        @include mq(desktop) {
-            padding-bottom: 16px;
-            @include  fontstyle(400,58px,66px);
-            }
+    @include mq(desktop) {
+        padding-bottom: 16px;
+        @include  fontstyle(400,58px,66px);
+        }
+
+}
+
+.advantages__item--721 {
+    
 
     &::before {
         content: ' ';
         display: block;
-        height: 50px;
+        height: 51px;
         width: 33px;
-        margin: 0px 0px 16px 0px;
+        margin: 1px 0px 16px 0px;
         
        
         background-repeat: no-repeat;
         background-size: contain;
         background-image: url(../images/advantages/image-1.png);
     
-            @include mq(retina) {
-                background-image: url(../images/advantages/image-1@2x.png);
-            }
-    
-            @include mq(tablet) {
-                background-image: url(../images/advantages/image-1.png);
-            }
-            @include mq(retina) {
-                background-image: url(../images/advantages/image-1@2x.png);
-            }
-            
-    
-            @include mq(desktop) {
-                background-image: url(../images/advantages/image-1.png);
-            }
-            @include mq(retina) {
-                background-image: url(../images/advantages/image-1@2x.png);
-            }
+        @include mq(retina) {
+            background-image: url(../images/advantages/image-1@2x.png);
         }
-    }
 
-.advantages__amount--16kg {
-   font-family: 'Titan One';
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 41px;
-    text-align: left;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: $secondaryTextColor;
-
-    
-    padding-bottom: 4px;
-    margin:0px;
-
-    @include mq(tablet) {
-        padding-bottom: 13px;
-        @include  fontstyle(400,48px,55px);
+        @include mq(tablet) {
+            background-image: url(../images/advantages/image-1.png);
+        }
+        @include mq(retina) {
+            background-image: url(../images/advantages/image-1@2x.png);
         }
         
+
         @include mq(desktop) {
-            padding-bottom: 16px;
-            @include  fontstyle(400,58px,66px);
-            }
+            background-image: url(../images/advantages/image-1.png);
+        }
+        @include mq(retina) {
+            background-image: url(../images/advantages/image-1@2x.png);
+        }
+    }
+    }
+
+.advantages__item--16kg {
+   
 
     &::before {
     content: ' ';
@@ -148,60 +158,38 @@
 
     height: 50px;
     width: 50px;
-    margin: 0px 0px 16px 0px;
+    margin: 1px 0px 16px 0px;
    
    
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url(../images/advantages/image-2.png);
     
-            @include mq(retina) {
-                background-image: url(../images/advantages/image-2@2x.png);
-            }
-    
-            @include mq(tablet) {
-                background-image: url(../images/advantages/image-2.png);
-    
-                @include mq(retina) {
-                    background-image: url(../images/advantages/image-2@2x.png);
-                }
-            }
-    
-            @include mq(desktop) {
-                background-image: url(../images/advantages/image-2.png);
-    
+        @include mq(retina) {
+            background-image: url(../images/advantages/image-2@2x.png);
+        }
+
+        @include mq(tablet) {
+            background-image: url(../images/advantages/image-2.png);
+
             @include mq(retina) {
                 background-image: url(../images/advantages/image-2@2x.png);
             }
         }
 
+        @include mq(desktop) {
+            background-image: url(../images/advantages/image-2.png);
+
+        @include mq(retina) {
+            background-image: url(../images/advantages/image-2@2x.png);
+        }
     }
 
 }
 
-.advantages__amount--84 {
-    font-family: 'Titan One';
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 41px;
-    text-align: left;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: $secondaryTextColor;
+}
 
-    
-    padding-bottom: 4px;
-    margin:0px;
-
-    @include mq(tablet) {
-        padding-bottom: 13px;
-        @include  fontstyle(400,48px,55px);
-        }
-        
-        @include mq(desktop)  {
-            padding-bottom: 16px;
-            @include  fontstyle(400,58px,66px);
-            }
+.advantages__item--84 {
 
     &::before {
     content: ' ';
@@ -217,26 +205,26 @@
     background-size: contain;
     background-image: url(../images/advantages/image-3.png);
     
-            @include mq(retina) {
-                background-image: url(../images/advantages/image-3@2x.png);
-            }
-    
-            @include mq(tablet) {
-                background-image: url(../images/advantages/image-3.png);
-            }
-                @include mq(retina) {
-                    background-image: url(../images/advantages/image-3@2x.png);
-                }
-            
-    
-            @include mq(desktop) {
-                background-image: url(../images/advantages/image-3.png);
-            }
+        @include mq(retina) {
+            background-image: url(../images/advantages/image-3@2x.png);
+        }
+
+        @include mq(tablet) {
+            background-image: url(../images/advantages/image-3.png);
+        }
             @include mq(retina) {
                 background-image: url(../images/advantages/image-3@2x.png);
             }
         
+
+        @include mq(desktop) {
+            background-image: url(../images/advantages/image-3.png);
         }
+        @include mq(retina) {
+            background-image: url(../images/advantages/image-3@2x.png);
+        }
+    
+    }
     
     }
 
@@ -253,45 +241,38 @@
     width: 230px;
     margin: 0px;
 
-    transition-property: background-color, font-size;
-    transition-duration: 150ms;
+    transition-property: font-size;
+    transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
 
     @include mq(tablet) {
         @include  fontstyle(700,14px,174%);
+        width: 162px;
+        margin: 0px;
         }
         
-        @include mq(desktop)  {
-            width:288px;
-            @include  fontstyle(700,16px,176%);
-            }
-
-}
-
-.advantages__item:hover .advantages__about {
-    
-display:block;
-background-color: rgba(255,184,202, 0.5);
-box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.3);
-font-size: 14px;
-width: 240px;
-padding: 4px;
-
-@include mq(tablet) {
-    width:185px;
-    font-size: 16px;
-    padding: 0px 4px;
-    }
-    
     @include mq(desktop)  {
-        width:300px;
-        padding: 5px 2px;
-        font-size: 18px;
+        width:288px;
+        @include  fontstyle(700,16px,176%);
+        width: 317px;
+        margin: 0px;
+        }
+    
+        .advantages__item:hover &,
+        .advantages__item:focus & {
+            font-size: 14px;
+
+            @include mq(desktop)  {
+            font-size: 17px;
+            }
         
         }
 
 }
+
+
+
 
 
 
