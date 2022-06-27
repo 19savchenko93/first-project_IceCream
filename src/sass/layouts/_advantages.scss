@@ -1,0 +1,272 @@
+.advantages {
+    background-color: $secondaryBgc;
+    padding-bottom: 60px;
+}
+
+.advantages__title {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.advantages__list {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+
+        @include mq(mobile-only) {
+        display: flex;
+        flex-direction: column;
+        }
+
+        @include mq(tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        width: 767px; 
+        margin-right: -4px; 
+        }
+        
+        @include mq(desktop) { 
+        width: 1200px; 
+        margin-right: -115px;
+        }
+
+}
+
+.advantages__item {
+    position: relative;
+    height: 167px;
+    max-width: 440px;
+    margin: 0px 0px 32px 0px;
+    padding: 0px;
+
+    @include mq(tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        width: 180px; 
+        height: 226px;
+        margin: 0px 4px 0px 0px;
+        }
+        
+        @include mq(desktop) { 
+        display: block;
+        width: 288px; 
+        height: 223px;
+        margin-right: 115px;
+        }
+
+        &:last-child  {
+        margin-right: 0px; 
+        }
+}
+
+.advantages__amount--721 {
+    font-family: 'Titan One';
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 41px;
+    text-align: left;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $secondaryTextColor;
+
+    
+    padding-bottom: 4px;
+    margin:0px;
+
+    @include mq(tablet) {
+        padding-bottom: 13px;
+        @include  fontstyle(400,48px,55px);
+        }
+        
+        @include mq(desktop) {
+            padding-bottom: 16px;
+            @include  fontstyle(400,58px,66px);
+            }
+
+    &::before {
+        content: ' ';
+        display: block;
+        height: 50px;
+        width: 33px;
+        margin: 0px 0px 16px 0px;
+        
+       
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url(../images/advantages/image-1.png);
+    
+            @include mq(retina) {
+                background-image: url(../images/advantages/image-1@2x.png);
+            }
+    
+            @include mq(tablet) {
+                background-image: url(../images/advantages/image-1.png);
+            }
+            @include mq(retina) {
+                background-image: url(../images/advantages/image-1@2x.png);
+            }
+            
+    
+            @include mq(desktop) {
+                background-image: url(../images/advantages/image-1.png);
+            }
+            @include mq(retina) {
+                background-image: url(../images/advantages/image-1@2x.png);
+            }
+        }
+    }
+
+.advantages__amount--16kg {
+   font-family: 'Titan One';
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 41px;
+    text-align: left;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $secondaryTextColor;
+
+    
+    padding-bottom: 4px;
+    margin:0px;
+
+    @include mq(tablet) {
+        padding-bottom: 13px;
+        @include  fontstyle(400,48px,55px);
+        }
+        
+        @include mq(desktop) {
+            padding-bottom: 16px;
+            @include  fontstyle(400,58px,66px);
+            }
+
+    &::before {
+    content: ' ';
+    display: block;
+    background-color: inherit;
+
+    height: 50px;
+    width: 50px;
+    margin: 0px 0px 16px 0px;
+   
+   
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../images/advantages/image-2.png);
+    
+            @include mq(retina) {
+                background-image: url(../images/advantages/image-2@2x.png);
+            }
+    
+            @include mq(tablet) {
+                background-image: url(../images/advantages/image-2.png);
+    
+                @include mq(retina) {
+                    background-image: url(../images/advantages/image-2@2x.png);
+                }
+            }
+    
+            @include mq(desktop) {
+                background-image: url(../images/advantages/image-2.png);
+    
+            @include mq(retina) {
+                background-image: url(../images/advantages/image-2@2x.png);
+            }
+        }
+
+    }
+
+}
+
+.advantages__amount--84 {
+    font-family: 'Titan One';
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 41px;
+    text-align: left;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $secondaryTextColor;
+
+    
+    padding-bottom: 4px;
+    margin:0px;
+
+    @include mq(tablet) {
+        padding-bottom: 13px;
+        @include  fontstyle(400,48px,55px);
+        }
+        
+        @include mq(desktop)  {
+            padding-bottom: 16px;
+            @include  fontstyle(400,58px,66px);
+            }
+
+    &::before {
+    content: ' ';
+    display: block;
+    background-color: inherit;
+
+    height: 50px;
+    width: 44px;
+    margin: 0px 0px 16px 0px;
+
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../images/advantages/image-3.png);
+    
+            @include mq(retina) {
+                background-image: url(../images/advantages/image-3@2x.png);
+            }
+    
+            @include mq(tablet) {
+                background-image: url(../images/advantages/image-3.png);
+            }
+                @include mq(retina) {
+                    background-image: url(../images/advantages/image-3@2x.png);
+                }
+            
+    
+            @include mq(desktop) {
+                background-image: url(../images/advantages/image-3.png);
+            }
+            @include mq(retina) {
+                background-image: url(../images/advantages/image-3@2x.png);
+            }
+        
+        }
+    
+    }
+
+
+.advantages__about {
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 170%;
+    letter-spacing: 0.02em;
+    color: $blacktext;
+
+    width: 180px;
+    margin: 0px;
+    
+
+    @include mq(tablet) {
+        @include  fontstyle(700,14px,174%);
+        }
+        
+        @include mq(desktop)  {
+            width:288px;
+            @include  fontstyle(700,16px,176%);
+            }
+
+}
+
+
+
+
+
+
+
