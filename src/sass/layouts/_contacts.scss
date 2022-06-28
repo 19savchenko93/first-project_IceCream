@@ -352,6 +352,9 @@
     padding: 12px 0;
     
     color: $primaryTextColor;
+    @media screen and (max-width:1199px) {
+        padding: 0;
+    }
 }
 
 .another-icon{
