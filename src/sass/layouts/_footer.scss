@@ -36,7 +36,8 @@
         margin-bottom: 12px;}
 
     @include mq(desktop){
-    @include fontstyle(400, 30px, 1.13);}
+    @include fontstyle(400, 30px, 1.13);
+margin-bottom: 16px;}
 }
 
 .footer__title{
