@@ -1,6 +1,13 @@
 // ⁡⁣⁣⁢​‌‍‌𝗖𝗼𝗻𝘁𝗮𝗰𝘁𝘀​⁡
 
 .section{
+    @media screen and (min-width:1200px) {
+         padding-top: 30px;
+        padding-bottom: 60px
+    }
+}
+
+.section-gradient{
     background:  linear-gradient( $primaryTextColor  20%, $secondaryBgc 50 100%);
 
     @media screen and (max-width:767px) {
@@ -186,7 +193,6 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 1.12;    
-    margin-bottom: 12px;
     color: $subtitleTextColor;
 
     @media screen and (max-width:767px) {
@@ -197,6 +203,10 @@
         @include fontstyle(500, 14px, 1.2);
         width: 159px;
     }
+}
+
+.time-margin{
+    margin-bottom: 12px;
 }
 
 .contacts-group__item:not(:last-child){
@@ -339,6 +349,7 @@
     align-items: center;
     justify-content: center;
     transition: 250ms ease;
+    padding: 12px 0;
     
     color: $primaryTextColor;
 }
