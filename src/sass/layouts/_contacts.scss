@@ -1,6 +1,13 @@
 // ⁡⁣⁣⁢​‌‍‌𝗖𝗼𝗻𝘁𝗮𝗰𝘁𝘀​⁡
 
 .section{
+    @media screen and (min-width:1200px) {
+         padding-top: 30px;
+        padding-bottom: 60px
+    }
+}
+
+.section-gradient{
     background:  linear-gradient( $primaryTextColor  20%, $secondaryBgc 50 100%);
 
     @media screen and (max-width:767px) {
@@ -186,7 +193,6 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 1.12;    
-    margin-bottom: 12px;
     color: $subtitleTextColor;
 
     @media screen and (max-width:767px) {
@@ -197,6 +203,10 @@
         @include fontstyle(500, 14px, 1.2);
         width: 159px;
     }
+}
+
+.time-margin{
+    margin-bottom: 12px;
 }
 
 .contacts-group__item:not(:last-child){
@@ -257,6 +267,7 @@
 
 .contacts-list{
     margin-bottom: 60px;
+    justify-content: center;
 
     @media screen and (max-width:767px) {
         margin-bottom: 32px;
@@ -270,10 +281,14 @@
     @media screen and (max-width:767px) {
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
     }
 }
 
 .button{
+    scroll-behavior: none;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -294,7 +309,7 @@
     &:focus{
         background-color: $primaryBgc;
         transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        fill: $secondaryTextColor;
+        // fill: $secondaryTextColor;
         
     }
 
@@ -308,6 +323,7 @@
         height: 55px;
         margin-bottom: 10px;
         margin-right: 0;
+      
     }
 
     @media screen and (min-width:768px) and (max-width:1199px) {
@@ -333,8 +349,21 @@
     align-items: center;
     justify-content: center;
     transition: 250ms ease;
+    padding: 12px 0;
     
     color: $primaryTextColor;
+    @media screen and (max-width:1199px) {
+        padding: 0;
+    }
+}
+
+.another-icon{
+    fill:  $primaryTextColor;
+}
+
+.button:hover .another-icon,
+.button:focus .another-icon{
+    fill: $secondaryTextColor;
 }
 
 

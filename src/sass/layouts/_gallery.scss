@@ -1,15 +1,21 @@
 .gallery {
     padding-left:0;
     padding-right: 0;
+
     height: 136px;
     position: sticky;
+
+    height: 196px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
     background-image: linear-gradient(
     to bottom,
-    $secondaryBgc 37%,
-    $btnBgcPrimary 37%);
+    $secondaryBgc 30%,
+    $btnBgcPrimary 30%);
 
     @include mq(tablet-only) {
-        height: 327;
+        height: 387px;
         background-image: linear-gradient(
     to bottom,
     $secondaryBgc 50%,
@@ -17,11 +23,13 @@
     }
 
     @include mq(desktop) {
-        height: 430;
+        height: 550;
+        padding-top: 60px;
+        padding-bottom: 60px;
         background-image: linear-gradient(
     to bottom,
-    $secondaryBgc 21%,
-    $btnBgcPrimary 21%);
+    $secondaryBgc 25%,
+    $btnBgcPrimary 25%);
     }
 }
 
@@ -33,11 +41,11 @@ grid-gap: 2.5px;
 width: 320px;
 margin-left: auto;
 margin-right: auto;
+padding: 0;
 
 @include mq(tablet-only) {
 display: grid;
 grid-template-columns: 104px 104px 214px 104px 104px 104px; 
-// grid-template-rows: 214px 104px;
 grid-gap: 6px;
 width: 768px;
 margin-left: auto;
@@ -58,8 +66,6 @@ margin-right: auto;
 .grid-item {
     display: flex;
     margin: 0;
-    // align-items: center;
-    justify-content: center;
     position: relative;
 }
 
@@ -89,7 +95,7 @@ margin-right: auto;
     }
 
    .gallery__grid-item3 {
-    z-index: 1;
+    z-index: 2;
    }
 
    .gallery__grid-item4 {

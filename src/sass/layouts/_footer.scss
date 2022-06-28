@@ -1,5 +1,8 @@
 .footer__section{background: $secondaryBgc;
-    padding-bottom: 0;}
+    padding-bottom: 0;
+    padding-top: 20px;
+    @include mq(desktop){padding-top: 60px;}
+}
 
 .footer{
     padding-left: 20px;
@@ -87,8 +90,9 @@
 
 .social-contact__list{
 display: flex;
-justify-content: flex-end;
 margin-bottom: 40px;
+justify-content: flex-end;
+
 }
 
 .social-contact__item{
@@ -124,9 +128,8 @@ margin-bottom: 40px;
 .footer-title{
     display: block;
     margin-bottom: 40px;
-     @include mq(mobily){
-        width: 232px;
-    }
+    width: 232px;
+    
     @include mq(tablet){
         width: 340px;
     }
