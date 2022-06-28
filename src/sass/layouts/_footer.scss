@@ -32,7 +32,8 @@
     color: $subtitleTextColor;
     margin-bottom: 16px;
     @include mq(tablet){
-        @include fontstyle(400, 26px, 1.15);}
+        @include fontstyle(400, 26px, 1.15);
+        margin-bottom: 12px;}
 
     @include mq(desktop){
     @include fontstyle(400, 30px, 1.13);}
