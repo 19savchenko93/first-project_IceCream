@@ -1,0 +1,471 @@
+
+.hero-header{
+   padding-top: 8px;
+   background-color:$headerBgc;
+   position: sticky;
+//    position: relative;
+   overflow: hidden;
+   @include mq(tablet){
+       padding-top: 32px;
+   }
+}
+.hero-div.container{
+    position: relative;
+}
+.hero{
+padding-top: 194px;
+padding-bottom: 245px;
+@include mq(tablet){
+    padding-top: 150px;
+    padding-bottom: 212px;
+}
+@include mq(desktop){
+    padding-top: 350px;
+    padding-bottom: 232px;
+}
+
+}
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero__tittle{
+font-family: $secondaryFontFamily;
+font-size: 26px;
+font-weight: 400;
+line-height: 30px;
+letter-spacing: 0.04em;
+text-align: left;
+text-transform:uppercase;
+width: 218px;
+position: absolute;
+z-index: 106;
+top: 194px;
+@include mq(tablet){
+    left: 32px;
+top: 102px;
+font-size: 22px;
+width: 162px;
+}
+@include mq(desktop){
+    font-size: 38px;
+    width: 277px;
+    top: 115px;
+    left: 16px;
+    line-height:52.49px;
+}
+}
+
+.hero__tittle--word{
+font-family: $secondaryFontFamily;
+font-size: 48px;
+font-weight: 400;
+line-height: 46px;
+letter-spacing: 0em;
+color: $secondaryTextColor;
+text-transform:uppercase;
+@include mq(tablet){
+font-size: 34px;
+}
+@include mq(desktop){
+    font-size: 58px;
+}
+}
+.hero__list{
+position: absolute;
+
+top: 300px;
+z-index: 101;
+margin-top: 20px;
+display: flex;
+@include mq(tablet){
+    top: 202px;
+}
+@include mq(desktop){
+    top: 276px;
+}
+}
+.hero__item--red{
+margin-right: 8px;
+}
+.hero__button--white,
+.hero__button--red,
+.buynow__button{
+display: block;
+height: 24px;
+border-radius: 20px;
+border: none;
+font-family: $primaryFontFamily;
+font-size: 8px;
+font-weight: 400;
+line-height: 10px;
+letter-spacing: 0em;
+text-align: center;
+@include mq(desktop){
+    font-size: 14px;
+    height: 40px;
+}
+}
+.hero__button--red{
+width: 62.4px;
+color:$primaryTextColor;
+background-color:$secondaryTextColor ;
+@include mq(desktop){
+    width: 107px;
+}
+}
+.hero__button--white{
+width: 82.8px;
+background-color: $primaryTextColor;
+color:$secondaryTextColor ;
+&:hover{
+    background-color: #ECEBEB;;
+}
+@include mq(desktop){
+    width: 138px;
+}
+}
+.menu__button{
+    border: none;
+    background-color:transparent;
+    @include mq(desktop){
+        display: none;
+    }
+}
+.icon-close{
+    fill:$primaryTextColor;
+    display: none;
+}
+.menu__button.is-open .icon-close{
+    display: block;
+}
+.menu__button.is-open .icon-menu{
+    display: none;
+}
+.img__circle{
+ position: absolute;
+ width: 346px;
+left: 36px;
+top: 83px;
+@include mq(tablet){
+left: 248px;
+top: 43px;
+width: 335px;
+height:333px;
+}
+@include mq(desktop){
+    width: 534px;
+    height: 534px;
+    top: 21px;
+    left: 517px;
+}
+}
+.img__icecream{
+position: absolute;
+width: 171px;
+height: 410px;
+left: 117px;
+top: 92px;
+z-index: 90;
+@include mq(tablet){
+left: 322px;
+top: 80px;
+width: 143px;
+height: 336px;
+top: 80px;
+}
+@include mq(desktop){
+    width: 236px;
+    height: 557px;
+    top: 76px;
+    left: 636px;
+}
+}
+// tablet
+.buynow__button{
+    display: none;
+    @include mq(tablet){
+background-color: $btnBgcPrimary;
+width: 160px;
+font-weight: 700;
+color:$secondaryTextColor;
+font-size: 16px;
+line-height: 21px;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 44px;
+text-align: center;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+&:hover{
+    background-color: #ECEBEB;;
+    }
+    margin-left: 32px;
+}
+}
+.buynow__text{
+    margin-right: 14px;
+    text-align: center;
+}
+.tablet__nav{
+    display: flex;
+}
+.img__tasty{
+    display: none;
+    @include mq(tablet){
+        display: block;
+    position: absolute;
+    left: 546px;
+top: 265px;
+    }
+    @include mq(desktop){
+        width: 304px;
+        top: 391px;
+        left: 880px;
+}
+}
+.img__milk{
+    display: none;
+    @include mq(tablet){
+        display: block;
+        position: absolute;
+        width: 152px;
+        left: 32px;
+        top: 246px;
+    }
+    @include mq(desktop){
+        width: 213px;
+        left: 16px;
+top: 356px;
+}
+}
+.hero__text{
+    display: none;
+    @include mq(tablet){
+    display: block;
+    width: 114px;
+    color: $primaryTextColor;
+    font-style: normal;
+    position: absolute;
+    left: 184px;
+    top: 287px;
+    font-family: $primaryFontFamily;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+@include mq(desktop){
+    width: 200px;
+    font-size: 14px;
+    line-height: 20px;
+    left: 229px;
+    top: 424px;
+}
+}
+.img__arrow{
+    display: none;
+    @include mq(tablet){
+        display: block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 184px;
+    top: 342px;
+    }
+    @include mq(desktop){
+        width: 26px;
+        height: 26px;
+        left: 229px;
+    top: 522px;
+
+    }
+}
+.hero__numbers{
+    position: absolute;
+    z-index: 105;
+    left: 673px;
+    top: 64px;
+    @include mq(desktop){
+    left: 1112px;
+    top: 120px;
+
+    }
+}
+.hero__number{
+    &:not(:last-child){
+        margin-bottom: 16px;
+    }
+    @include mq(desktop){
+        &:not(:last-child){
+            margin-bottom: 15px;
+    }
+}
+}
+.text__number{
+    font-family: $secondaryFontFamily;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+    text-align: right;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $secondaryTextColor;
+    position: relative;
+    z-index: 100;
+    @include mq(desktop){
+        font-size: 46px;
+        line-height:52.67px;
+    }
+}
+.text__tittle{
+    font-family: $primaryFontFamily;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 10px;
+    text-align: right;
+    @include mq(desktop){
+        font-size: 14px;
+    }
+}
+.img__whitecircle{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    z-index: 99;
+    top: -2px;
+    left: 43px;
+    @include mq(desktop){
+        width: 30px;
+        height: 30px;
+        top: -10px;
+    left: 70px;
+    }
+}
+.img__whitecircle.second{
+    top: 56px;
+    @include mq(desktop){
+        top: 68px;
+}
+}
+// desktop
+.site__navigation{
+    display: none;
+    @include mq(desktop){
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 343px;
+        z-index: 110;
+    }
+}
+.navigation__item{
+    font-family: $primaryFontFamily;
+    color:$primaryTextColor ;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    &:not(:last-child){
+        margin-right: 35px;
+    }
+}
+.navigation__item.current{
+    color: $secondaryTextColor;
+}
+
+// !Mob menu //
+
+.open-mob-menu-btn {
+    background-color: inherit;
+    border: none;
+    display: block;
+    margin-left: auto;
+
+    @media screen and (min-width: 768px) {
+        position: absolute;
+        top: 52px;
+        right: 224px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        display: none;
+    }
+}
+
+.mob-menu {
+    width: 250px;
+
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        width: 46%;
+    }
+
+    z-index: 9999;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow: scroll;
+    box-shadow: -8px 0px 20px 0px rgba(0, 0, 0, 0.25);
+    background-color: $modal-background;
+    transform: translatex(110%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-menu__container {
+    padding: 23px 21px;
+    position: relative;
+}
+
+.close-mob-menu-btn {
+    background-color: inherit;
+    border: none;
+    display: block;
+    margin-bottom: 23px;
+    max-height: 44px;
+    margin-left: auto;
+}
+
+.mob-menu-btn {
+    padding-left: 49px;
+    padding-right: 49px;
+
+    @media screen and (min-width: 768px) {
+        padding-left: 43px;
+        padding-right: 43px;
+    }
+
+    margin: auto;
+    margin-bottom: 32px;
+}
+
+.mob-menu-btn__icon {
+    margin-left: 14px;
+}
+
+// Навигация моб-меню
+
+.mob-menu-navigation__item {
+    &:not(:last-child) {
+        margin-bottom: 23px;
+    }
+}
+
+.mob-menu-navigation__link {
+    font-family: DM Sans;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.23;
+    color: $primaryTextColor;
+
+    &:hover,
+    &:focus {
+        color: $btnBgcSecondary;
+    }
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

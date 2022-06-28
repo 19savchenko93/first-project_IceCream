@@ -1,14 +1,37 @@
-<section class="section">
+<section class="hero-header">
     <header class="header">
-        <div class="container">
+        <div class=" hero-div container">
             <nav class="navigation">
                 <a href="" class="navigation__logo">
                     <img src="/src/images/hero-header/logo.png" alt="">
                 </a>
+                <ul class="site__navigation">
+                    <li class="navigation__item current">Home</li>
+                    <li class="navigation__item">About us</li>
+                    <li class="navigation__item">How it's made?</li>
+                    <li class="navigation__item">Our products</li>
+                    <li class="navigation__item">Contact</li>
+                </ul>
+                <div class="tablet__nav">
+                <button class="menu__button"
+                aria-expanded ="false" 
+                aria-controls="menu-header"  
+                data-menu-button>
                 <svg width="20px" height="12px">
-                    <use href ="/src/images/symbol-defs.svg#icon-menu">
+                    <use href ="/src/images/symbol-defs.svg#icon-menu" class="icon-menu"></use>
+                    <use href ="/src/images/symbol-defs.svg#icon-close" class="icon-close"></use>
                 </svg>
+            </button>
+            <button class="buynow__button" type="button">
+                <span class="buynow__text">Buy now</span>
+                <svg class="buynow__icon" width="8" height="10">
+                    <use href="/src/images/symbol-defs.svg#icon-arrow-2"></use>
+
+                </svg>
+            </button>
+        </div>
             </nav>
+
         
 
     <div class="hero">
@@ -28,6 +51,41 @@
         <img src="/src/images/hero-header/ice-cream-cone__lg.png" alt="">
         <img src="/src/images/hero-header/ellipse__lg.png">
     </div>
+    
+            <div class="hero">
+              <h1 class="hero__tittle">Ice cream made with <span class="hero__tittle--word">passion</span></h1>
+                <ul class="hero__list">
+                    <li class="hero__item--red">
+                        <button class="hero__button--red" type="button">
+                            Products
+                        </button>
+                    </li>
+                    <li class="hero__item--white">
+                        <button class="hero__button--white" type="button">
+                            How it's made?
+                        </button>
+                    </li>
+                </ul>
+                <img src="/src/images/hero-header/ellipse__lg.png" alt="ellipse" class="img__circle">
+                <img src="/src/images/hero-header/ice-cream-cone__lg.png" alt="ice cream" class="img__icecream">
+                <img src="/src/images/hero-header/soo-tasty__lg.png" alt="yummy" class="img__tasty" width="190px" height="150px">
+                <img src="/src/images/hero-header/milk__lg.png" alt="milk" class="img__milk">
+                <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+                <img src="/src/images/hero-header/arrow-right__lg.png" alt="" class="img__arrow">
+                <ul class="hero__numbers">
+                    <li class="hero__number">
+<p class="text__number">16</p>
+<p class="text__tittle">cafes</p>
+<img src="/src/images/hero-header/white-circle__lg.png" alt="white circle" class="img__whitecircle">
+                    </li>
+                    <li class="hero__number"></li>
+<p class="text__number">23</p>
+<p class="text__tittle">food trucks</p>
+<img src="/src/images/hero-header/white-circle__lg.png" alt="white circle" class="img__whitecircle second">
+                </ul>
+            </div>
+        </div>
+
     </header>
     
 <!-- !Кнопка моб-меню -->

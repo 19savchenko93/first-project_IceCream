@@ -1,0 +1,381 @@
+// ⁡⁣⁣⁢​‌‍‌𝗖𝗼𝗻𝘁𝗮𝗰𝘁𝘀​⁡
+
+.section{
+    @media screen and (min-width:1200px) {
+         padding-top: 30px;
+        padding-bottom: 60px
+    }
+}
+
+.section-gradient{
+    background:  linear-gradient( $primaryTextColor  20%, $secondaryBgc 50 100%);
+
+    @media screen and (max-width:767px) {
+        background:  linear-gradient(  $primaryTextColor 24%, $secondaryBgc 100 100%);
+    }
+}
+
+.contacts-h1{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.contacts-list{
+    display: flex;
+    padding: 0;
+
+    @media screen and (max-width:767px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.contacts-list__item{
+    background-color: $primaryTextColor;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+    width: 368px;
+    // height: 538px;
+    margin-right: 32px;
+    padding: 40px;
+
+    &:last-child{
+        margin-right: 0;
+    }
+
+    @media screen and (max-width:767px) {
+        width: 280px;
+        height: 412px;
+        margin-bottom: 20px;
+        padding: 40px;
+        margin-right: 0;
+    }
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        width: 224px;
+        // height: 528px;
+    }
+}
+
+.contacts-list__title{
+    font-family: $primaryFontFamily;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.12%;
+    
+    text-align: center;
+    letter-spacing: 0.04em;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+    text-align: center;
+    color: $primaryTextColor;
+    width: 75.1px;
+    height: 28px;
+    background: #F0D1A5;
+    border-radius: 6px;
+    margin-bottom: 32px;
+
+    @media screen and (max-width:767px) {
+        @include fontstyle(500, 12px, 1.5);
+        width: 80px;
+        height: 16px;
+    }
+
+}
+
+.title-green{
+    background: #C2E297;
+    border-radius: 6px;
+    width: 138px;
+    height: 28px;
+
+    @media screen and (max-width:767px) {
+       width: 130px;
+       height: 16px;
+    }
+    
+}
+
+.contacts-list__city{
+    font-family: $primaryFontFamily;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.12;
+    letter-spacing: 0.04em;
+    
+   color:  $blacktext;
+   margin-bottom: 8px;
+
+   @media screen and (max-width:767px) {
+        @include fontstyle(500, 12px, 1.5)
+   }
+
+   @media screen and (min-width:768px) and (max-width:1199px) {
+        @include fontstyle(500, 14px, 1.2)
+   }
+}
+
+.contacts-list__discr{
+    font-family: $primaryFontFamily;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.12;    
+    letter-spacing: 0.04em;
+    
+    color: $textcolor;
+    
+    padding-bottom: 32px;
+    border-bottom: 1px solid #E1E1E1;
+
+
+    @media screen and (max-width:767px) {
+        @include fontstyle(500, 12px, 1.5);
+        padding-bottom: 24px;
+    }
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        @include fontstyle(500, 14px, 1.2);
+        width: 159px;
+    }
+}
+
+// ​‌‍‌⁡⁣⁣⁢𝗧𝗶𝗺𝗲𝘁𝗮𝗯𝗹𝗲⁡​
+
+.contacts-timetable{
+    // margin-bottom: 64px;
+
+    @media screen and (max-width:767px) {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #E1E1E1;
+
+}
+
+.contacts-group{
+    padding-top: 32px;
+}
+
+.contacts-list__days{
+    font-family: $primaryFontFamily;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.12;
+    letter-spacing: 0.04em;
+    margin-bottom: 5px;
+    
+    color: $blacktext;
+
+    @media screen and (max-width:767px) {
+        @include fontstyle(500, 12px, 1.5);
+    }
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        @include fontstyle(500, 14px, 1.2);
+        width: 159px;
+    }
+}
+
+.contacts-list__time{
+    font-family: $primaryFontFamily;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.12;    
+    color: $subtitleTextColor;
+
+    @media screen and (max-width:767px) {
+        @include fontstyle(500, 12px, 1.5);
+    }
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        @include fontstyle(500, 14px, 1.2);
+        width: 159px;
+    }
+}
+
+.time-margin{
+    margin-bottom: 12px;
+}
+
+.contacts-group__item:not(:last-child){
+    margin-bottom: 5px;
+}
+
+.contacts-list__tel{
+    font-family: $primaryFontFamily;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.12;    
+    margin-bottom: 10px;
+    color: $textcolor;
+    transition: 250ms ease;
+
+    &:hover,
+    &:focus{
+        color: $secondaryTextColor;
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @media screen and (max-width:767px) {
+        @include fontstyle(500, 12px, 1.5)
+    }
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        @include fontstyle(500, 14px, 1.2)
+    }
+}
+
+.contacts-list__email{
+    font-family: $primaryFontFamily;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.12;
+
+    color: $textcolor;
+    transition: 250ms ease;
+
+    &:hover,
+    &:focus{
+        color: $secondaryTextColor;
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @media screen and (max-width:767px) {
+        @include fontstyle(500, 12px, 1.5)
+    }
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        @include fontstyle(500, 14px, 1.2)
+    }
+}
+
+// ⁡⁣⁣⁢​‌‍‌𝗕𝘂𝘁𝗼𝗼𝗻𝘀​⁡
+
+.contacts-list{
+    margin-bottom: 60px;
+    justify-content: center;
+
+    @media screen and (max-width:767px) {
+        margin-bottom: 32px;
+    }
+}
+
+.contacts-buttons{
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width:767px) {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+    }
+}
+
+.button{
+    scroll-behavior: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: $primaryTextColor;
+
+    background: $btnBgcSecondary;
+    border-radius: 22px;
+    border: none;
+    cursor: pointer;
+    width: 198px;
+    height: 55px;
+    margin-right: 12px;
+    transition: 250ms ease;
+
+    position: relative;
+
+    &:hover,
+    &:focus{
+        background-color: $primaryBgc;
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        // fill: $secondaryTextColor;
+        
+    }
+
+    &:last-child{
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+
+    @media screen and (max-width:767px) {
+        width: 161.45px;
+        height: 55px;
+        margin-bottom: 10px;
+        margin-right: 0;
+      
+    }
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        width: 191.45px;
+        height: 55px;
+    }
+
+}
+
+.button-another{
+    background-color: $primaryTextColor;
+    fill: $secondaryTextColor;
+}
+
+.button-text{
+    margin-right: 13px;
+    font-family:  $primaryFontFamily;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 0.7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 250ms ease;
+    padding: 12px 0;
+    
+    color: $primaryTextColor;
+    @media screen and (max-width:1199px) {
+        padding: 0;
+    }
+}
+
+.another-icon{
+    fill:  $primaryTextColor;
+}
+
+.button:hover .another-icon,
+.button:focus .another-icon{
+    fill: $secondaryTextColor;
+}
+
+
+.button:hover .button-text,
+.button:focus .button-text{
+    color: $secondaryTextColor;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text-another{
+    color: $secondaryTextColor;
+}
+.header-cont-icon {
+    fill: $secondaryTextColor;
+}
