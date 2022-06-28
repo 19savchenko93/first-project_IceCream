@@ -1,9 +1,14 @@
 .gallery {
     padding-left:0;
     padding-right: 0;
+
+    height: 136px;
+    position: sticky;
+
     height: 196px;
         padding-top: 30px;
         padding-bottom: 30px;
+
     background-image: linear-gradient(
     to bottom,
     $secondaryBgc 30%,

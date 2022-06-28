@@ -2,6 +2,7 @@
 .hero-header{
    padding-top: 8px;
    background-color:$headerBgc;
+   position: sticky;
 //    position: relative;
    overflow: hidden;
    @include mq(tablet){
