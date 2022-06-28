@@ -1,0 +1,145 @@
+.footer__section{background: $secondaryBgc;
+    padding-bottom: 0;
+    padding-top: 20px;
+    @include mq(desktop){padding-top: 60px;}
+}
+
+.footer{
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom:1px solid #E1E1E1; 
+    @include mq(tablet) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    @include mq(desktop) {
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 60px;
+        padding-left: 16px;
+        padding-right: 16px;}
+    }
+    
+
+.footer__subtitle{
+    @include fontstyle(400, 18px, 1.17);
+    font-family: $secondaryFontFamily;
+    text-transform: uppercase;
+    color: $subtitleTextColor;
+    margin-bottom: 16px;
+    @include mq(tablet){
+        @include fontstyle(400, 26px, 1.15);}
+
+    @include mq(desktop){
+    @include fontstyle(400, 30px, 1.13);}
+}
+
+.footer__title{
+    @include fontstyle(400, 34px, 1.15);
+    color: $secondaryTextColor;
+    font-family: $secondaryFontFamily;
+    text-transform: uppercase;
+
+    @include mq(tablet){
+        @include fontstyle(400, 48px, 1.15);
+        letter-spacing: 0.06em;}
+
+    @include mq(desktop){
+    @include fontstyle(400, 58px, 1.14);
+    }
+}
+.footer__invite{
+    font-family: $primaryFontFamily;
+    @include fontstyle(700, 12px, 1.86);
+    color:$blacktext;
+    text-align: right;
+    margin-bottom: 40px;
+    @include mq(tablet){
+        @include fontstyle(700, 14px, 1.86);
+        }
+        @include mq(desktop){
+            @include fontstyle(700, 16px, 1.86);
+            letter-spacing: 0.02em;
+            margin-bottom: 0;
+            }
+}
+.footer__phone{
+    color:$secondaryTextColor;
+}
+
+.footer__text{
+    font-family: $primaryFontFamily;
+    color: $textcolor;
+    @include fontstyle(700, 14px, 1.52);
+    text-align: center;
+    padding: 16px 0 3px 0;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @include mq(tablet){
+    width: 100%;
+    padding: 8px 0 3px 0;
+    @include fontstyle (700, 14px, 1.86);
+    letter-spacing: 0.02em;}
+}
+
+.social-contact__list{
+display: flex;
+margin-bottom: 40px;
+justify-content: flex-end;
+
+}
+
+.social-contact__item{
+    margin-right: 28.24px;
+    &:last-child{margin-right: 0;}
+    @include mq(tablet){
+        margin-right: 30px;
+    }
+}
+
+.social-contact__icon{
+    fill:#FEA5BB;
+    transition: fill 500ms ease-in-out;
+}
+
+.social-contact__link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+
+}
+.social-contact__link:focus .social-contact__icon{
+    fill: $secondaryTextColor;
+}
+
+.social-contact__link:hover .social-contact__icon{
+    fill: $secondaryTextColor;
+}
+
+.footer-title{
+    display: block;
+    margin-bottom: 40px;
+    width: 232px;
+    
+    @include mq(tablet){
+        width: 340px;
+    }
+    @include mq(desktop){
+    margin-bottom: 0;
+    width: 500px;
+}
+    
+}
+.social-contact{
+    display: block;
+    text-align: left;
+}
