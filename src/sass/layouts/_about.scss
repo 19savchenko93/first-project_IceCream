@@ -207,26 +207,25 @@
         }
 }
 
-.btn {
-    padding: 11px 38px 11px 37px;
-    display: block;
-    font-family: DM Sans;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.31;
-    color: $secondaryTextColor;
-    background-color: $primaryTextColor;
+.about-btn {
+    margin: 0;
+    padding: 0;
+    background: $btnBgcPrimary;
+    width: 176px;
+    height: 44px;
     border-radius: 22px;
     border: none;
-    cursor: pointer;
-
-    &:hover,
-    &:focus {
-        background-color: #ECEBEB;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+    &:hover {
+        background-color: #ECEBEB;
+        ;
+    }
 }
 
 .about-btn__text{
