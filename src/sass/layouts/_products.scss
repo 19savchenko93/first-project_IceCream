@@ -6,7 +6,7 @@
 
 .products__subtitle {
     @include fontstyle (400, 18px, 1.17);
-    font-family: 'Titan One', cursive;
+    font-family: $secondaryFontFamily;
     text-transform: uppercase;
     color: $subtitleTextColor;;
 
@@ -24,7 +24,7 @@
 
 .products__title {
     @include fontstyle (400, 34px, 1.15);
-    font-family: 'Titan One', cursive;
+    font-family: $secondaryFontFamily;
     text-transform: uppercase;
     color: $secondaryTextColor;
 
@@ -53,10 +53,12 @@
 };
 
 .products-list__item {
+    // 
+    position: relative;
+    transition: .7s cubic-bezier(0.075, 0.82, 0.165, 1);
+
     padding: 160px 40px 40px;
     border-radius: 24px;
-    background-position: center;
-    background-size: contain;
 
     @include mq(mobile-only) {
         margin-bottom: 140px;
@@ -64,6 +66,7 @@
         margin-bottom: 0;
         }
     }
+   
     @include mq(tablet) {
         flex-basis: calc((100% - 32px) / 3);
         padding: 118px 32px 32px;
@@ -74,6 +77,11 @@
         padding: 165px 62px 60px;
     }
 };
+.products-list__item:hover,
+.products-list__item:focus {
+    box-shadow: 0 10px 10px $textcolor;
+}
+
 
 .products-list__item--ice-cream {
     background-color: $headerBgc;
@@ -89,7 +97,6 @@
 }
 
     
-
 .products-list__title {
     position: relative;
     @include fontstyle (400, 20px, 1.15);
@@ -98,7 +105,7 @@
     
     text-align: center;
     margin-bottom: 70px;
-    font-family: 'Titan One', cursive;
+    font-family: $secondaryFontFamily;
 
     @include mq(desktop) {
     @include fontstyle (400, 30px, 1.15)
@@ -113,9 +120,12 @@
                 transform: translate(-50%, -50%);
                 width: 280px;
                 height: 280px;
+                z-index: 50;
+                pointer-events: none;
                 background-position: center;
                 background-size: contain;
                 background-repeat: no-repeat;
+                transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
         
                 @include mq(tablet) {
                     width: 224px;
@@ -129,6 +139,9 @@
                     bottom: -130px;
                 }
 
+}
+.products-list__item:hover .products-list__title::before {
+    transform: translate(-50%, -44%);
 }
 .products-list__title--ice-cream {
     &::before {
@@ -230,7 +243,7 @@
     
     text-align: center;
     margin-bottom: 32px;
-    font-family: 'DM Sans', sans-serif;
+    font-family: $primaryFontFamily;
 
     @include mq(desktop) {
         @include fontstyle (700, 16px, 1.75);
@@ -239,16 +252,156 @@
 };
 
 .products-list__btn {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     border-radius: 50%;
     width: 40px;
     height: 40px;
     margin: 0 auto;
-    background-position: center;
-    background-size: contain;
-    background-image: url(../images/products/arrow-right.png);
-    @include mq(retina) {
-        background-image: url(../images/products/arrow-right@2x.png);
-    }
+    background-color: $primaryTextColor;
+    transition: box-shadow 0.3s cubic-bezier(0.39, 0.575, 0.565, 1), background-color 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
 };
+.product-list__icon {
+    fill: $secondaryTextColor;
+    transition: transform 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+@keyframes pulse-shrink {
+    to {
+        transform: scale(.9);
+    }
+}
+.products-list__btn:hover {
+    box-shadow: 0 0 10px $textcolor;
+        cursor: pointer;
+        animation-name: pulse-shrink;
+        animation-duration: .4s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+}
+.products-list__btn:focus {
+    animation-play-state: paused;
+    box-shadow: 0 0 30px $textcolor;
+    background-color: #e5e7e8;
+}
+
+
+.des {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    padding: inherit;
+    font-size: 14px;
+    transition: transform 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+    opacity: 0;
+    transform: scale(0.3);
+    z-index: 25;
+    transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+    @include mq(tablet) {
+        padding: 165px 20px 32px;
+    }
+
+}
+.des--ice-cream {
+    // background-color: #f88ca5;
+    background-color: inherit;
+}
+.des--ice-coffee {
+    // background-color: #e8c086;
+    background-color: inherit;
+}
+.des--milkshakes {
+    // background-color: #acd17b;
+    background-color: inherit;
+}
+
+.products-list__title--description {
+    font-family: $secondaryFontFamily;
+    @include fontstyle (400, 20px, 1.15);
+    color: $primaryTextColor;
+    text-align: center;
+    text-transform: uppercase;
+    
+    @include mq(tablet) {
+        @include fontstyle (400, 24px, 1.15)
+    }
+    @include mq(desktop) {
+        @include fontstyle (400, 30px, 1.15);
+    }
+}
+.ace-cream-menu__list {
+    color: $primaryTextColor;
+    font-family: $primaryFontFamily;
+    @include fontstyle (700, 14px, 1.5);
+    padding: 5px 0;
+    @include mq(tablet) {
+        font-size: 12px;
+    } 
+        @include mq(desktop) {
+            font-size: 16px;
+        }
+}
+
+.ice-cream-menu .ace-cream-menu__list span:first-child {
+    float: left;
+    padding: 0 5px 0 0;
+}
+.ice-cream-menu .ace-cream-menu__list span:first-child + span {
+    float: right;
+    padding: 0 0 0 5px;
+}
+.ice-cream-menu .ace-cream-menu__list::after {
+    content: '';
+        display: block;
+        overflow: hidden;
+        border-bottom: 2px dotted $primaryTextColor;
+        height: 14px;
+}
+
+
+
+
+
+
+
+
+
+.reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+
+
+
+
+
+
+
+.products-list__btn--des {
+    margin: 0;
+    margin-left: auto;
+    width: 30px;
+    height: 30px;
+}
+.js-menu-container-a.is-open {
+    transform: scale(1);
+    opacity: 1;
+}
+.js-menu-container-b.is-open {
+    transform: scale(1);
+    opacity: 1;
+}
+.js-menu-container-c.is-open {
+    transform: scale(1);
+    opacity: 1;
+}

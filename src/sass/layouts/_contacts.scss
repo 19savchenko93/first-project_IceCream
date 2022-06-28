@@ -1,7 +1,18 @@
 // ⁡⁣⁣⁢​‌‍‌𝗖𝗼𝗻𝘁𝗮𝗰𝘁𝘀​⁡
 
 .section{
-    background: linear-gradient($primaryTextColor,  $secondaryBgc);
+    @media screen and (min-width:1200px) {
+         padding-top: 30px;
+        padding-bottom: 60px
+    }
+}
+
+.section-gradient{
+    background:  linear-gradient( $primaryTextColor  20%, $secondaryBgc 50 100%);
+
+    @media screen and (max-width:767px) {
+        background:  linear-gradient(  $primaryTextColor 24%, $secondaryBgc 100 100%);
+    }
 }
 
 .contacts-h1{
@@ -11,10 +22,12 @@
 
 .contacts-list{
     display: flex;
+    padding: 0;
 
     @media screen and (max-width:767px) {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
@@ -180,7 +193,6 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 1.12;    
-    margin-bottom: 12px;
     color: $subtitleTextColor;
 
     @media screen and (max-width:767px) {
@@ -191,6 +203,10 @@
         @include fontstyle(500, 14px, 1.2);
         width: 159px;
     }
+}
+
+.time-margin{
+    margin-bottom: 12px;
 }
 
 .contacts-group__item:not(:last-child){
@@ -251,6 +267,7 @@
 
 .contacts-list{
     margin-bottom: 60px;
+    justify-content: center;
 
     @media screen and (max-width:767px) {
         margin-bottom: 32px;
@@ -264,10 +281,19 @@
     @media screen and (max-width:767px) {
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
     }
 }
 
 .button{
+    scroll-behavior: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: $primaryTextColor;
+
     background: $btnBgcSecondary;
     border-radius: 22px;
     border: none;
@@ -283,6 +309,8 @@
     &:focus{
         background-color: $primaryBgc;
         transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        // fill: $secondaryTextColor;
+        
     }
 
     &:last-child{
@@ -295,6 +323,7 @@
         height: 55px;
         margin-bottom: 10px;
         margin-right: 0;
+      
     }
 
     @media screen and (min-width:768px) and (max-width:1199px) {
@@ -306,9 +335,11 @@
 
 .button-another{
     background-color: $primaryTextColor;
+    fill: $secondaryTextColor;
 }
 
 .button-text{
+    margin-right: 13px;
     font-family:  $primaryFontFamily;
     font-style: normal;
     font-weight: 700;
@@ -318,8 +349,18 @@
     align-items: center;
     justify-content: center;
     transition: 250ms ease;
+    padding: 12px 0;
     
     color: $primaryTextColor;
+}
+
+.another-icon{
+    fill:  $primaryTextColor;
+}
+
+.button:hover .another-icon,
+.button:focus .another-icon{
+    fill: $secondaryTextColor;
 }
 
 
@@ -331,4 +372,7 @@
 
 .text-another{
     color: $secondaryTextColor;
+}
+.header-cont-icon {
+    fill: $secondaryTextColor;
 }
