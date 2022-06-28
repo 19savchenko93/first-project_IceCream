@@ -7,7 +7,7 @@
         padding-bottom: 60px;
     }
      @include mq(desktop){
-        padding-bottom: 120px;
+        padding-bottom: 60px;
         background-image: url(../images/about/background__lg.png);
             background-repeat: no-repeat;
             background-position: 0 75%;
@@ -39,34 +39,36 @@
     font-style: normal;
     font-weight: 400;
     font-size: 34px;
-    line-height: 39px;
+    line-height: 1.14;
     text-align: center;
     letter-spacing: 0.04em;
     text-transform: uppercase;
+    margin-bottom: 32px;
 
     color: $secondaryTextColor;
 
         @include mq(tablet){
         margin-bottom: 40px;
         font-size: 48px;
-        line-height: 55px;
+        line-height: 1.14;
         letter-spacing: 0.04em;
         }
         @include mq(desktop){
         margin-bottom: 60px;
         font-size: 58px;
-        line-height: 66px;
+        line-height: 1.13;
         letter-spacing: 0.06em;
         }
 
 
 }
 .about-subtitle{
+    margin-bottom: 15px;
     font-family: $secondaryFontFamily;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 21px;
+    line-height: 1.16;
     text-align: center;
     text-transform: uppercase;
 
@@ -74,12 +76,12 @@
 
         @include mq(tablet){
         font-size: 26px;
-        line-height: 30px;
+        line-height: 1.15;
         margin-bottom: 16px;
         }
         @include mq(desktop){
         font-size: 30px;
-        line-height: 34px;
+        line-height: 1.13;
         letter-spacing: 0.04em;
         }
 }
@@ -126,7 +128,7 @@
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 19px;
+    line-height: 1.58;
 
     color: $blacktext;
 
@@ -134,13 +136,14 @@
         margin-bottom: 20px;
         width: 334px;
         font-size: 14px;
-        line-height: 176%;
+        line-height: 1.76;
 
     }
     @include mq(desktop) {
+        margin-bottom: 32px;
         width: 463px;
         font-size: 16px;
-        line-height: 176%;
+        line-height: 1.76;
         /* or 28px */
         
         letter-spacing: 0.04em;
@@ -162,14 +165,13 @@
     @include mq(tablet) {
             width: 334px;
             font-size: 14px;
-            line-height: 176%;
+            line-height: 1.76;
             letter-spacing: 0.04em;
         }
         @include mq(desktop) {
             width: 463px;
             font-size: 14px;
-            line-height: 194%;
-                /* or 27px */
+            line-height: 1.93;
             letter-spacing: 0.04em;
          }
 
@@ -183,22 +185,20 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 1.62;
-        /* or 19px */
        
     color: $textcolor;
 
     @include mq(tablet) {
             width: 334px;
              font-size: 14px;
-            line-height: 176%;
+            line-height: 1.76;
             letter-spacing: 0.04em;
             margin-bottom: 40px;
         }
     @include mq(desktop) {
         width: 463px;
         font-size: 14px;
-        line-height: 194%;
-                /* or 27px */
+        line-height: 1.93;
         letter-spacing: 0.04em;
         }
 }
@@ -228,7 +228,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
-    line-height: 18px;
+    line-height: 1.28;
     text-align: center;
     margin-right: 14px;
 
@@ -236,7 +236,7 @@
 
     @include mq(tablet) {
     font-size: 16px;
-    line-height: 21px;
+    line-height: 1.31;
     }
 }
 .about-btn__icon{
