@@ -19,10 +19,12 @@
 
     @include mq(tablet) {
         @include fontstyle (400, 26px, 1.15);
+        margin-bottom: 18px;
     }
 
     @include mq(desktop) {
         @include fontstyle (400, 30px, 1.15);
+        margin-bottom: 16px;
     }
 }
 
@@ -39,6 +41,7 @@
 
     @include mq(tablet) {
         @include fontstyle (400, 48px, 1.15);
+        margin-bottom: 158px;
     }
 
     @include mq(desktop) {
