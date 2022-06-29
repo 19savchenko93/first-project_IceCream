@@ -35,7 +35,7 @@
                     orci in imperdiet placerat.
                     Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt.</p>
                 <p class="about-content__text--sentence">Aliquam erat volutpat. Aenean accumsan.</p>
-                <button class="about-btn" type="button">
+                <button class="about-btn" type="button" data-modal-open-about>
                     <span class="about-btn__text">Read more</span>
                     <svg class="about-btn__icon" width="8" height="10">
                         <use href="/src/images/symbol-defs.svg#icon-arrow-2"></use>
@@ -43,5 +43,26 @@
                 </button>
             </div>
         </div>  
+    </div>
+    <div class="backdrop is-hidden" data-modal-about>
+    
+        <div class="modal-wrapper">
+    
+            <button class="modal-btn" data-modal-close-about>
+                <svg width="11" height="11">
+                    <use href="./images/symbol-defs.svg#icon-close"></use>
+                </svg>
+            </button>
+    
+            <!--Форма модалки -->
+    
+            <div>
+    
+                <h4 class="modal-title">How milk is made</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque minus ipsam adipisci assumenda consequatur sint recusandae perferendis incidunt iusto! Quasi ad incidunt esse? Velit, laudantium repellendus quidem omnis delectus sapiente.</p>
+    
+            </div>
+    
+        </div>
     </div>
 </section>
