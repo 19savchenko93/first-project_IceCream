@@ -23,12 +23,12 @@
         @include mq(tablet) {
         display: flex;
         flex-wrap: wrap;
-        width: 767px; 
+        // width: 767px; 
         }
         
-        @include mq(desktop) { 
-        width: 1200px; 
-        }
+        // @include mq(desktop) { 
+        // width: 1200px; 
+        // }
 
 }
 

@@ -1,5 +1,5 @@
 .mobile-menu{
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -31,13 +31,28 @@
     top: 0;
     right: 0;
     cursor: pointer;
+}
 
+.mobile-men__burger-icon{
+    cursor: pointer;
+    transition: 250ms ease;
+
+    &:hover,
+    &:focus{
+        width: 20px;
+        height: 20px;
+        fill: $secondaryTextColor;
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
 }
 
 .another-svg{
     fill: #FFFFFF ;
-    padding-right: 20px;
-    padding-top: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 32px;
+    margin-top: 20px;
     transition: 250ms ease;
 
     &:hover,
@@ -90,6 +105,7 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 21px;
+    margin-right: 21px;
     
     color: #D41443;
 }
@@ -120,6 +136,7 @@
     padding-top: 12px;
     padding-bottom: 12px;
     cursor: pointer;
+    margin-bottom: 0;
 }
 
 .mob-menu-navigation__item:nth-child(1){
