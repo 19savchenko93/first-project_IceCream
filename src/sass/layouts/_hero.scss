@@ -116,12 +116,17 @@ text-align: center;
 .hero__button--red{
 width: 62.4px;
 background-color:$secondaryTextColor ;
+color: $primaryTextColor;
 @include mq(desktop){
     width: 107px;
 }
+display: flex;
+align-items: center;
+justify-content: center;
 }
 .hero__button--white{
-width: 82.8px;
+    color: $secondaryTextColor;
+    width: 82.8px;
 background-color: $primaryTextColor;
 &:hover{
     background-color: #ECEBEB;;
@@ -129,12 +134,9 @@ background-color: $primaryTextColor;
 @include mq(desktop){
     width: 138px;
 }
-}
-.button__link{
-    color:$primaryTextColor;
-}
-.button__link.white{
-    color: $secondaryTextColor;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 .mobile-menu__button{
     border: none;

@@ -69,6 +69,9 @@
 .products-list__item {
     // 
     position: relative;
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
     transition: .7s cubic-bezier(0.075, 0.82, 0.165, 1);
 
     padding: 160px 40px 40px;
@@ -297,6 +300,9 @@
 .product-list__icon {
     fill: $secondaryTextColor;
     transition: transform 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+    @include mq(retina) {
+        width: 22px;
+    }
 }
 
 @keyframes pulse-shrink {
