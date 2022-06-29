@@ -1,8 +1,14 @@
+html{
+    scroll-behavior: smooth;
+}
+
 
 .hero-header{
    padding-top: 8px;
    background-color:$headerBgc;
    position: sticky;
+
+   
 //    position: relative;
    overflow: hidden;
    @include mq(tablet){
@@ -387,96 +393,4 @@ top: 356px;
 }
 .navigation__link.current{
     color: $secondaryTextColor;
-}
-
-// !Mob menu //
-
-.open-mob-menu-btn {
-    background-color: inherit;
-    border: none;
-    display: block;
-    margin-left: auto;
-
-    @media screen and (min-width: 768px) {
-        position: absolute;
-        top: 52px;
-        right: 224px;
-    }
-
-    @media screen and (min-width: 1280px) {
-        display: none;
-    }
-}
-
-.mob-menu {
-    width: 250px;
-
-    @media screen and (min-width: 768px) and (max-width: 1279px) {
-        width: 46%;
-    }
-
-    z-index: 9999;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: 0;
-    overflow: scroll;
-    box-shadow: -8px 0px 20px 0px rgba(0, 0, 0, 0.25);
-    background-color: $modal-background;
-    transform: translatex(110%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.mob-menu__container {
-    padding: 23px 21px;
-    position: relative;
-}
-
-.close-mob-menu-btn {
-    background-color: inherit;
-    border: none;
-    display: block;
-    margin-bottom: 23px;
-    max-height: 44px;
-    margin-left: auto;
-}
-
-.mob-menu-btn {
-    padding-left: 49px;
-    padding-right: 49px;
-
-    @media screen and (min-width: 768px) {
-        padding-left: 43px;
-        padding-right: 43px;
-    }
-
-    margin: auto;
-    margin-bottom: 32px;
-}
-
-.mob-menu-btn__icon {
-    margin-left: 14px;
-}
-
-// Навигация моб-меню
-
-.mob-menu-navigation__item {
-    &:not(:last-child) {
-        margin-bottom: 23px;
-    }
-}
-
-.mob-menu-navigation__link {
-    font-family: DM Sans;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.23;
-    color: $primaryTextColor;
-
-    &:hover,
-    &:focus {
-        color: $btnBgcSecondary;
-    }
-
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
