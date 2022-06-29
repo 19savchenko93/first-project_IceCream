@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 (() => {
   const mobileMenu = document.querySelector('.js-menu-container');
   const openMenuBtn = document.querySelector('.js-open-menu');
