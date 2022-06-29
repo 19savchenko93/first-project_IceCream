@@ -15,11 +15,6 @@
     }
 }
 
-.contacts-h1{
-    opacity: 0;
-    visibility: hidden;
-}
-
 .contacts-list{
     display: flex;
     padding: 0;
@@ -27,7 +22,7 @@
     @media screen and (max-width:767px) {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        // justify-content: center;
     }
 }
 
@@ -35,10 +30,22 @@
     background-color: $primaryTextColor;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
-    width: 368px;
+    // width: 368px;
     // height: 538px;
     margin-right: 32px;
+
     padding: 40px;
+
+    
+    // @media screen and (min-width:768px) and (max-width:1199px) {
+    //     // width: calc((100% - 4 * 32px) / 3);
+        
+    //     // margin-right: 32px;
+    // }
+
+    @media screen and (min-width:768px) and (max-width:800px) {
+        margin-right: 20px;
+    }
 
     &:last-child{
         margin-right: 0;
@@ -46,7 +53,6 @@
 
     @media screen and (max-width:767px) {
         width: 280px;
-        height: 412px;
         margin-bottom: 20px;
         padding: 40px;
         margin-right: 0;
@@ -56,11 +62,6 @@
         }
     }
 
-
-    @media screen and (min-width:768px) and (max-width:1199px) {
-        width: 224px;
-        // height: 528px;
-    }
 }
 
 .contacts-list__title{
@@ -136,13 +137,12 @@
     
     color: $textcolor;
     
-    padding-bottom: 32px;
-    border-bottom: 1px solid #E1E1E1;
+    margin-bottom: 32px;
 
 
     @media screen and (max-width:767px) {
         @include fontstyle(500, 12px, 1.5);
-        padding-bottom: 24px;
+        // padding-bottom: 24px;
     }
 
     @media screen and (min-width:768px) and (max-width:1199px) {
@@ -164,11 +164,12 @@
     padding-top: 32px;
     padding-bottom: 32px;
     border-bottom: 1px solid #E1E1E1;
+    border-top: 1px solid #E1E1E1;
 
 }
 
-.contacts-group{
-    padding-top: 32px;
+.contacts-group_list{
+    margin-top: 32px;
 }
 
 .contacts-list__days{
@@ -226,7 +227,7 @@
     line-height: 1.12;    
     margin-bottom: 10px;
     color: $textcolor;
-    transition: 250ms ease;
+    transition: 250ms ease-in-out;
 
     &:hover,
     &:focus{
@@ -251,7 +252,7 @@
     line-height: 1.12;
 
     color: $textcolor;
-    transition: 250ms ease;
+    transition: 250ms ease-in-out;
 
     &:hover,
     &:focus{
@@ -276,6 +277,20 @@
 
     @media screen and (max-width:767px) {
         margin-bottom: 32px;
+    }
+}
+
+.contacts-buttons__item{
+    margin-right: 12px;
+
+    &:last-child{
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+
+    @media screen and (max-width:767px){
+        margin-bottom: 10px;
+        margin-right: 0;
     }
 }
 
@@ -305,8 +320,8 @@
     cursor: pointer;
     width: 198px;
     height: 55px;
-    margin-right: 12px;
-    transition: 250ms ease;
+    transition: 250ms ease-in-out;
+
 
     position: relative;
 
@@ -318,17 +333,11 @@
         
     }
 
-    &:last-child{
-        margin-bottom: 0;
-        margin-right: 0;
-    }
+  
 
     @media screen and (max-width:767px) {
         width: 161.45px;
         height: 55px;
-        margin-bottom: 10px;
-        margin-right: 0;
-      
     }
 
     @media screen and (min-width:768px) and (max-width:1199px) {
@@ -353,7 +362,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 250ms ease;
+    transition: 250ms ease-in-out;
     padding: 12px 0;
     
     color: $primaryTextColor;
