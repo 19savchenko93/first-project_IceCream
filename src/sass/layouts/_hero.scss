@@ -109,7 +109,6 @@ text-align: center;
 }
 .hero__button--red{
 width: 62.4px;
-color:$primaryTextColor;
 background-color:$secondaryTextColor ;
 @include mq(desktop){
     width: 107px;
@@ -118,7 +117,6 @@ background-color:$secondaryTextColor ;
 .hero__button--white{
 width: 82.8px;
 background-color: $primaryTextColor;
-color:$secondaryTextColor ;
 &:hover{
     background-color: #ECEBEB;;
 }
@@ -126,7 +124,13 @@ color:$secondaryTextColor ;
     width: 138px;
 }
 }
-.menu__button{
+.button__link{
+    color:$primaryTextColor;
+}
+.button__link.white{
+    color: $secondaryTextColor;
+}
+.mobile-menu__button{
     border: none;
     background-color:transparent;
     @include mq(desktop){
@@ -374,7 +378,14 @@ top: 356px;
         margin-right: 35px;
     }
 }
-.navigation__item.current{
+.navigation__link{
+    color:$primaryTextColor ;
+    &:focus,
+    &:hover{
+        color: $secondaryTextColor;
+    }
+}
+.navigation__link.current{
     color: $secondaryTextColor;
 }
 
