@@ -30,6 +30,7 @@
         }
 
         @include mq(tablet) {
+        max-width: 100%;
         display: flex;
         justify-content: space-between;
         }
