@@ -3,7 +3,8 @@
     padding-right: 0;
 
     height: 136px;
-    position: sticky;
+    // position: sticky;
+    z-index: -1;
 
     height: 196px;
         padding-top: 30px;
@@ -66,7 +67,7 @@ margin-right: auto;
 .grid-item {
     display: flex;
     margin: 0;
-    position: relative;
+    // position: relative;
 }
 
 .gallery__grid-item1 {
@@ -83,7 +84,7 @@ margin-right: auto;
 
 .gallery__grid-item2 {
     padding-top: 30px;
-    z-index: 1;
+    // z-index: 1;
 
      @include mq(tablet-only) {
     padding-top: 80px;
@@ -95,11 +96,11 @@ margin-right: auto;
     }
 
    .gallery__grid-item3 {
-    z-index: 2;
+    // z-index: 2;
    }
 
    .gallery__grid-item4 {
-           z-index: 1;
+        //    z-index: 1;
     padding-top: 30px;
 
     @include mq(tablet-only) {
@@ -112,7 +113,7 @@ margin-right: auto;
     }
 
   .gallery__grid-item5 {
-          z-index: 1;
+        //   z-index: 1;
           padding-top: 20px;
 
     @include mq(tablet-only) {
@@ -137,58 +138,54 @@ margin-right: auto;
     }
 
      .gallery__grid-item7 {
-             padding-top: 61px;
-
+             margin-top: 63px;
+             grid-column-start: 2;
+    grid-column-end: 3;
 
         @include mq(tablet-only) {
-    padding-top: 173px;
+    margin-top: 173px;
          }
 
  @include mq(desktop) {
-    padding-top: 216px;
+    margin-top: 216px;
         }
     }
 
      .gallery__grid-item8 {
-    padding-top: 78px;
+    margin-top: 78px;
 
         @include mq(tablet-only) {
-    padding-top: 202px;
+    margin-top: 202px;
          }
 
  @include mq(desktop) {
-    padding-top: 272px;
+    margin-top: 272px;
         }
     }
 
      .gallery__grid-item9 {
-             padding-top: 61px;
+             margin-top: 61px;
 
         @include mq(tablet-only) {
-    padding-top: 173px;
+    margin-top: 173px;
          }
 
  @include mq(desktop) {
-    padding-top: 216px;
+    margin-top: 216px;
         }
     }
 
      .gallery__grid-item10 {
-             padding-top: 52px;
+             margin-top: 52px;
 
         @include mq(tablet-only) {
-    padding-top: 152px;
+    margin-top: 152px;
          }
 
  @include mq(desktop) {
-    padding-top: 192px;
+    margin-top: 192px;
         }
     }
-
-.gallery__grid-item7 {
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
 
 .gallery__grid-img {
     transition: transform 0.25s;
@@ -197,4 +194,5 @@ margin-right: auto;
 .gallery__grid-img:hover,
 .gallery__grid-img:focus {
     transform: scale(1.1);
+    cursor: pointer;
 }

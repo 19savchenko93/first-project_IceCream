@@ -69,6 +69,9 @@
 .products-list__item {
     // 
     position: relative;
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
     transition: .7s cubic-bezier(0.075, 0.82, 0.165, 1);
 
     padding: 160px 40px 40px;
@@ -297,6 +300,9 @@
 .product-list__icon {
     fill: $secondaryTextColor;
     transition: transform 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+    @include mq(retina) {
+        width: 22px;
+    }
 }
 
 @keyframes pulse-shrink {
@@ -450,4 +456,50 @@
 .js-menu-container-c.is-open {
     transform: scale(1);
     opacity: 1;
+}
+
+
+
+.to-top {
+    width: 40px;
+    height: 40px;
+    background: $btnBgcSecondary;
+    opacity: 0.5;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bounce 7s infinite;
+    transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    5% {
+        transform: scale(1.2);
+    }
+
+    10% {
+        transform: scale(1);
+    }
+}
+
+.to-top:hover {
+    opacity: 1;
+    cursor: pointer;
+    box-shadow: 0 0 10px $textcolor;
+}
+.arrow-up {
+    fill: #fff;
+}
+.to-top__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
