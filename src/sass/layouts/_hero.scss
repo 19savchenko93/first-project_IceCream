@@ -108,6 +108,8 @@ font-weight: 400;
 line-height: 10px;
 letter-spacing: 0em;
 text-align: center;
+cursor: pointer;
+
 @include mq(desktop){
     font-size: 14px;
     height: 40px;
@@ -141,6 +143,7 @@ justify-content: center;
 .mobile-menu__button{
     border: none;
     background-color:transparent;
+    cursor: pointer;
     @include mq(desktop){
         display: none;
     }
